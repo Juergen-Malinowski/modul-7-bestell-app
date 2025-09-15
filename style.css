@@ -7,7 +7,7 @@ h1 {
     font-style: italic;
     text-align: center;
     background-color: rgba(220, 118, 36, 0.988);
-    margin-left: 150px;
+    margin-left: 450px;
     padding-top: 20px;
 }
 
@@ -22,4 +22,21 @@ h1 {
     background-color: rgba(220, 118, 36, 0.988);
     padding-top: 20px;
     padding-left: 10px;
+}
+
+.my_restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 3px;
+}
+
+.dishes {
+    width: calc(100% - 308px);
+    flex-grow: 1;
+}
+
+.shopping_basket {
+    width: 300px;
+    flex-grow: 1;
 }

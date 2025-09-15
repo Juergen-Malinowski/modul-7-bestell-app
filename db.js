@@ -2,28 +2,28 @@
 
 let myDishes = [
     {
-        "meal": "Gericht 1",
-        "price": 17.85,
-        "discription": "blabla",
+        "meal": "Chili-Con-Carne á la Malle",
+        "price": 12.75,
+        "discription": "scharfes Chili mit Rindfleisch, an Paprika, Zwiebeln, Kidneybohnen und Mais",
     },
     {
-        "meal": "Gericht 2",
-        "price": 17.85,
-        "discription": "blabla",
+        "meal": "Indischer Steckrüben-Hokkaidokürbis-Eintopf",
+        "price": 14.95,
+        "discription": "Eintopf von der Steckrübe und dem Hokkaido-Kürbis, aus einem feinen Rinderfonds mit Cocosmilch, Peperoni, Möhren und Lauchzwiebel",
     },
     {
-        "meal": "Gericht 3",
-        "price": 17.85,
-        "discription": "blabla",
+        "meal": "Bolognese á la Bolzum",
+        "price": 13.45,
+        "discription": "Bolognese mit Rinderhack, an Tomaten, Möhren, Zwiebeln und Paprika",
     },
         {
-        "meal": "Gericht 4",
-        "price": 17.85,
-        "discription": "blabla",
+        "meal": "Scampi-Knobi-Pfanne",
+        "price": 19.95,
+        "discription": "Scampi an Knoblauch, Zwiebeln, Peperoni, Rosmarin und Petersilie. Dazu frisches Fladenbrot.",
     },
         {
-        "meal": "Gericht 5",
-        "price": 17.85,
-        "discription": "blabla",
+        "meal": "Bandnudeln an Lachs in Limetten-Dill-Sahnesoße",
+        "price": 22.55,
+        "discription": "Bandnudeln mit frischen Lachs, an einer feinen Sahnesoße mit Limetten-Dill-Aroma und mit Paprikastreifen, Lauchzwiebel, Peperoni und Zwiebeln",
     },
 ]

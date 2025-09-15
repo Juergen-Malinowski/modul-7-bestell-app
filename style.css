@@ -6,6 +6,20 @@ h1 {
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    padding-top: 10px;
+    background-color: rgba(220, 118, 36, 0.988);
+    margin-left: 150px;
+    padding-top: 20px;
+}
 
+.header_grafik {
+    background-color: rgba(220, 118, 36, 0.988);
+    display: flex;
+}
+
+.bestell_logo {
+    width: 200px;
+    height: auto;
+    background-color: rgba(220, 118, 36, 0.988);
+    padding-top: 20px;
+    padding-left: 10px;
 }

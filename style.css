@@ -1,1 +1,11 @@
 /* BASIC CSS ... */
+
+h1 {
+    font-family: 'CS Freya Demo';
+    font-size: 5em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    padding-top: 10px;
+
+}

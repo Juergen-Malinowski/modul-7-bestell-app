@@ -9,7 +9,10 @@ function renderImgDishes() {
 function renderDishes(index) {
     return `
         <div class="single_dishes">
-            <p class="single_dishes_meal">${myDishes[index].meal}</p>
+            <div class="dishes_and_button">
+                <p class="single_dishes_meal">${myDishes[index].meal}</p>
+                <img class="plus_grafik" src="./assets/Logo/plus_button.png" alt="plus-button">
+            </div>
             <p class="single_dishes_discription">${myDishes[index].discription}</p>
             <p class="single_dishes_price">${myDishes[index].price} €</p>
         </div>

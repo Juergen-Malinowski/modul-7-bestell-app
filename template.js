@@ -1,5 +1,11 @@
 // for JS HTML-Templates
 
+function renderImgDishes() {
+    return `
+        <img class="img_grafik" src="./assets/img/wok.jpg" alt="WOK-Bild">
+    `
+}
+
 function renderDishes(index) {
     return `
         <div class="single_dishes">

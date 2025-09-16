@@ -34,6 +34,10 @@ h2 {
     padding-left: 10px;
 }
 
+.evaluation_grafik {
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
 .my_restaurant {
     display: flex;
     flex-direction: row;
@@ -54,19 +58,24 @@ h2 {
     flex-grow: 1;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    margin: 20px;
-    margin-right: 3px;
+    margin: 10px 3px 0 20px;
 }
 
-.dishes_grafik {
+.dishes_grafik {}
 
+.img_grafik {
+    width: 99%;
+    height: 200px;
+    margin: 10px 0 5px 20px;
+    border-radius: 20px 20px 20px 20px;
+    object-fit: cover;
 }
 
 .single_dishes {
     width: 99%;
     height: 200px;
     background-color: white;
-    margin: 20px;
+    margin: 0 0 20px 20px;
     border-radius: 20px 20px 20px 20px;
     padding-top: 5px;
     padding-left: 5px;

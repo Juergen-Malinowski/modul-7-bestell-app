@@ -3,13 +3,13 @@
 let myDishes = [
     {
         "meal": "Chili-Con-Carne á la Malle (scharf)",
-        "price": 12.75,
+        "price": 15.75,
         "discription": "scharfes Chili mit Rindfleisch, an Paprika, Zwiebeln, Kidneybohnen und Mais",
         "amount": 0,
     },
     {
         "meal": "Indischer Steckrüben-Hokkaidokürbis-Eintopf (scharf)",
-        "price": 14.95,
+        "price": 17.95,
         "discription": "Eintopf von der Steckrübe und dem Hokkaido-Kürbis, aus einem feinen Rinderfonds mit Cocosmilch, Peperoni, Möhren und Lauchzwiebel",
         "amount": 0,
     },

@@ -11,7 +11,8 @@ function renderDishes(index) {
         <div class="single_dishes">
             <div class="dishes_and_button">
                 <p class="single_dishes_meal">${myDishes[index].meal}</p>
-                <img class="plus_grafik" src="./assets/Logo/plus_button.png" alt="plus-button">
+                <img class="plus_grafik" src="./assets/Logo/plus_button.png" 
+                    onclick="addDishes(${index})" alt="plus-button">
             </div>
             <p class="single_dishes_discription">${myDishes[index].discription}</p>
             <p class="single_dishes_price">${myDishes[index].price} €</p>
@@ -40,5 +41,12 @@ function renderShoppingBasket() {
             <span class="basket_total">Gesamtpreis:</span>
             <span class="basket_total">0,00 €</span>
         </div>        
+    `
+}
+
+function renderAddDishes(index) {
+    return`
+        <p class="basket_meal">${myDishes[index].meal}</p>
+        <p class="basket_meal">ICH war in renderAddDishes</p>        
     `
 }

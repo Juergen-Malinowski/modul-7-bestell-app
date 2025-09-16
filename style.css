@@ -67,7 +67,8 @@ h2 {
     width: 99%;
     height: 200px;
     margin: 10px 0 5px 20px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 50% 50% 50% 50%;
+    /* border-radius: 20px 20px 20px 20px; */
     object-fit: cover;
 }
 
@@ -135,6 +136,12 @@ h2 {
     background-color: white;
 }
 
+.basket_meal {
+    font-size: 30px;
+    color: black;
+    background-color: white;
+}
+
 .price_box {
     background-color: white;
     display: flex;
@@ -151,3 +158,4 @@ h2 {
     font-weight: bold;
     background-color: white;
 }
+

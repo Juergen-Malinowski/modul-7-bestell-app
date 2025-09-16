@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 30px;
     text-align: center;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -57,7 +57,7 @@ h2 {
 
 .single_dishes {
     /* font-size: 40px; */
-    width: 95%;
+    width: 99%;
     height: 200px;
     background-color: white;
     margin: 20px;
@@ -67,7 +67,7 @@ h2 {
 }
 
 .single_dishes_meal {
-    font-size: 36px;
+    font-size: 28px;
     font-style: italic;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -76,7 +76,7 @@ h2 {
 }
 
 .single_dishes_discription {
-    font-size: 24px;
+    font-size: 18px;
     background-color: white;
     margin-bottom: 30px;
     margin-left: 5px;
@@ -84,7 +84,7 @@ h2 {
 }
 
 .single_dishes_price {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: orange;
     background-color: white;

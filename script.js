@@ -8,7 +8,5 @@ function initOnload() {
         nextDishes.innerHTML += renderDishes(index);
     }
     shoppingBasket.innerHTML += renderShoppingBasket();
-
-
 }
 

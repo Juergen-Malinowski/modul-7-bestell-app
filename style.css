@@ -11,6 +11,14 @@ h1 {
     padding-top: 20px;
 }
 
+h2 {
+    font-size: 36px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+}
+
 .header_grafik {
     background-color: rgba(220, 118, 36, 0.988);
     display: flex;
@@ -39,14 +47,18 @@ h1 {
 .shopping_basket {
     width: 300px;
     flex-grow: 1;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    margin: 20px;
+    margin-right: 3px;
 }
 
-.dishes_grafik {}
+/* .dishes_grafik {} */
 
 .single_dishes {
     /* font-size: 40px; */
     width: 95%;
-    height: 250px;
+    height: 200px;
     background-color: white;
     margin: 20px;
     border-radius: 20px 20px 20px 20px;
@@ -77,7 +89,32 @@ h1 {
     color: orange;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    /* margin: 20px; */
-    /* padding-top: 50px; */
     padding-left: 5px;
+}
+
+.basket_grafik {
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+.selection_grafik {
+    background-color: white;
+}
+
+.price_box {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+
+}
+
+.basket_subtotal {
+    color: grey;
+    background-color: white;
+}
+
+.basket_total {
+    font-weight: bold;
+    background-color: white;
 }

@@ -28,7 +28,7 @@ let myDishes = [
     {
         "meal": "Bandnudeln an Lachs in Limetten-Dill-Sahnesoße",
         "price": 22.55,
-        "discription": "Bandnudeln mit frischen Lachs, an einer feinen Sahnesoße mit Limetten-Dill-Aroma und mit Paprikastreifen, Lauchzwiebel, Peperoni und Zwiebeln",
+        "discription": "Bandnudeln mit frischen Lachs, in einer feinen Sahnesoße mit Limetten-Dill-Aroma, an Paprikastreifen, Lauchzwiebel, Peperoni und Zwiebeln",
         "amount": 0,
     },
 ]

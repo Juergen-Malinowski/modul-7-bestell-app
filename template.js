@@ -25,7 +25,6 @@ function renderSubtotal() {
     return `
         <span class="basket_subtotal">Warenkorb:</span>
         <span class="basket_subtotal">${showEuroValue(subTotal)}</span>
-
     `
 }
 
@@ -42,7 +41,6 @@ function renderTotalAmount() {
         <span class="basket_total">Gesamtpreis:</span>
         <span class="basket_total">${showEuroValue(totalAmount)}</span>    
     `
-
 }
 
 function renderAddDishes(index) {
@@ -83,6 +81,3 @@ function renderOrderError() {
 }
 
 
-function errorOrderClear() {
-    return
-}

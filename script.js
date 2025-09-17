@@ -4,6 +4,7 @@ let dishesAdd = document.getElementById("select_dishes");
 dishesAdd.innerHTML = "";
 let subTotal = 0;
 let totalAmount = 0;
+let errorMarker = false;
 
 function initOnload() {
     nextDishes = document.getElementById("show_dishes");
@@ -23,6 +24,10 @@ function initOnload() {
 
 function renderAllCosts(index) {
     // go to ALL render-function for COSTS
+    if (errorMarker) {
+        errorMarker = false;
+        clearErrorMessage();
+    }
     getPriceSubTotal();
     addSubtotal.innerHTML = renderSubtotal(index);
     addTravelExpenses.innerHTML = renderTravelExpenses();
@@ -83,7 +88,7 @@ function clearDishes(index) {
 }
 
 function showEuroValue(value_number) {
-    // function get value als parameter "value_number"
+    // function get value as a parameter "value_number"
     // function give back a string in correct EURO-Format
     return new Intl.NumberFormat('de-DE', {
         style: 'currency',
@@ -95,21 +100,20 @@ function showEuroValue(value_number) {
 
 function placeTheOrder() {
     // do the order for the shopping-basket
-    console.log("Gesamtpreis : ", totalAmount);
-
     if (totalAmount > 0) {
         // order is OK
         renderOrder();
     } else {
         // ERROR - there is NO order !
+        errorMarker = true;
         let errorMessage = document.getElementById("errorOrder");
         errorMessage.innerHTML = "";
         errorMessage.innerHTML = renderOrderError();
-        // alert("Ihr Warenkorb ist leer!");
     }
 }
 
-function errorOrderClear() {
+function clearErrorMessage() {
     // clear error-order-window
-
+    let errorMessage = document.getElementById("errorOrder");
+    errorMessage.innerHTML = "";
 }

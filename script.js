@@ -2,6 +2,7 @@
 
 let dishesAdd = document.getElementById("select_dishes");
 dishesAdd.innerHTML = "";
+let subTotal = 0;
 
 function initOnload() {
     nextDishes = document.getElementById("show_dishes");
@@ -33,8 +34,7 @@ function addDishes(index) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
     };
-    addSubtotal.innerHTML = renderSubtotal();
-    addTotalAmount.innerHTML = renderTotalAmount();
+    renderAllCosts();    
 }
 
 
@@ -48,8 +48,7 @@ function reduceDishes(index) {
             }
         }
     };
-    addSubtotal.innerHTML = renderSubtotal();
-    addTotalAmount.innerHTML = renderTotalAmount();
+    renderAllCosts();
 }
 
 
@@ -61,6 +60,5 @@ function clearDishes(index) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
     }
-    addSubtotal.innerHTML = renderSubtotal();
-    addTotalAmount.innerHTML = renderTotalAmount();
+    renderAllCosts();
 }

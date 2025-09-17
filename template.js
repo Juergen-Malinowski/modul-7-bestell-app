@@ -20,6 +20,20 @@ function renderDishes(index) {
     `
 }
 
+function renderSubtotal() {
+    return `
+        <span class="basket_subtotal">Zwischensumme:</span>
+        <span class="basket_subtotal">0,00 €</span>
+    `
+}
+
+function renderTotalAmount() {
+    return `
+        <span class="basket_total">Gesamtpreis:</span>
+        <span class="basket_total">0,00 €</span>    
+    `
+
+}
 
 function renderAddDishes(index) {
     return `
@@ -36,7 +50,7 @@ function renderAddDishes(index) {
         </div>             
         
         <div class="icons_disply_row_rubbish">   
-            <p class="icon_grafik">${myDishes[index].amount*myDishes[index].price}€</p>
+            <p class="icon_grafik">${myDishes[index].amount * myDishes[index].price}€</p>
             <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
                 onclick="clearDishes(${index})" alt="rubbish-button">             
         </div>           

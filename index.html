@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- <a href="https://iconscout.com/icons/plus" class="text-underline font-size-sm" target="_blank">Plus</a> by <a href="https://iconscout.com/de/contributors/zainal-abidin/:assets" class="text-underline font-size-sm" target="_blank">Zainal Abidin</a> -->
-<html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -37,20 +36,15 @@
                 <!-- BOX show selected dishes  -->
                 <div class="selection_grafik" id="select_dishes"></div>
                 <hr class="line_grafik">
-                <div class="price_box">
-                    <span class="basket_subtotal">Zwischensumme:</span>
-                    <span class="basket_subtotal">0,00 €</span>
-                </div>
+
+                <div class="price_box" id="go_subtotal"></div>
 
                 <div class="price_box">
                     <span class="basket_subtotal">Fahrtkosten:</span>
-                    <span class="basket_subtotal">0,00 €</span>
+                    <span class="basket_subtotal">3,00 €</span>
                 </div>
 
-                <div class="price_box">
-                    <span class="basket_total">Gesamtpreis:</span>
-                    <span class="basket_total">0,00 €</span>
-                </div>
+                <div class="price_box" id="total_amount"></div>
             </div>
 
 
@@ -58,7 +52,14 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <!-- reference to source of supply for ICONS -->
+        <a href="https://iconscout.com/icons/plus" 
+        class="text-underline font-size-sm" target="_blank">ICONS </a>by
+        <a href="https://iconscout.com/de/contributors/zainal-abidin/:assets" 
+        class="text-underline font-size-sm" target="_blank">Zainal Abidin</a>
+        <html lang="en">
+    </footer>
 </body>
 <script src="./db.js"></script>
 <script src="./template.js"></script>

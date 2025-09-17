@@ -5,11 +5,16 @@ dishesAdd.innerHTML = "";
 
 function initOnload() {
     nextDishes = document.getElementById("show_dishes");
-    shoppingBasket = document.getElementById("show_basket");
+    addSubtotal = document.getElementById("go_subtotal");
+    addTotalAmount = document.getElementById("total_amount");
+    addSubtotal.innerHTML = "";
+    addTotalAmount.innerHTML = "";
     nextDishes.innerHTML = renderImgDishes();
     for (let index = 0; index < myDishes.length; index++) {
         nextDishes.innerHTML += renderDishes(index);
     }
+    addSubtotal.innerHTML = renderSubtotal();
+    addTotalAmount.innerHTML = renderTotalAmount();
 }
 
 

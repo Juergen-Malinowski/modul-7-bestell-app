@@ -93,3 +93,18 @@ function showEuroValue(value_number) {
   }).format(value_number);
 }
 
+
+// // FUNCTION für Zahlen im Euro-Format
+// function formatEuroBetrag(betrag) {
+//   // Betragswert als Zahl erwartet
+//   return new Intl.NumberFormat('de-DE', {
+//     style: 'currency',
+//     currency: 'EUR',
+//     minimumFractionDigits: 2,
+//     maximumFractionDigits: 2
+//   }).format(betrag); // Betrag wird als String zurückgegeben
+// }
+
+// // Beispiele
+// console.log(formatEuroBetrag(1234.56));   // "1.234,56 €"
+// console.log(formatEuroBetrag(1000));      // "1.000,00 €"

@@ -73,9 +73,9 @@ function renderOrder() {
 
 function renderOrderError() {
     return`
-        <div class="box_for_error">
-            <button class="error_order_button" onclick="errorOrderClear()">
-                Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.</button>
+        <div class="box_for_order">
+            <p class="order_box">
+                Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.</p>
         </div>
     `
 }

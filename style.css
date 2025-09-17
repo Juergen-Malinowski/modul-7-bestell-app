@@ -242,7 +242,7 @@ h2 {
     border-radius: 10px 10px 10px 10px; */
 }
 
-.box_for_error {
+.box_for_order {
     width: 300px;
     height: 80px;
     background-color: white;
@@ -252,7 +252,7 @@ h2 {
     
 }
 
-.error_order_button {
+.order_box {
     font-size: 20px;
     background-color: yellow;
     margin: 10px;

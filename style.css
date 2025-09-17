@@ -135,7 +135,7 @@ h2 {
 
 /* CLASS for shoppingbasket */
 .basket_grafik {
-    position:sticky;
+    position: sticky;
     top: 0;
     border-radius: 20px 20px 20px 20px;
     background-color: white;
@@ -220,4 +220,17 @@ h2 {
 .icon_grafik_rubbish:hover {
     width: 25px;
     height: 25px;
+}
+
+.button_position {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button_grafik {
+    font-size: 24px;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
 }

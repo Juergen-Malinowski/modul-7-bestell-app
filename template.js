@@ -20,10 +20,18 @@ function renderDishes(index) {
     `
 }
 
+
 function renderSubtotal() {
     return `
         <span class="basket_subtotal">Zwischensumme:</span>
         <span class="basket_subtotal">0,00 €</span>
+    `
+}
+
+function renderTravelExpenses() {
+    return `
+        <span class="basket_subtotal">Fahrtkosten:</span>
+        <span class="basket_subtotal">5,00 €</span>
     `
 }
 

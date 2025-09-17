@@ -5,18 +5,25 @@ dishesAdd.innerHTML = "";
 
 function initOnload() {
     nextDishes = document.getElementById("show_dishes");
-    addSubtotal = document.getElementById("go_subtotal");
+    addSubtotal = document.getElementById("travel_expenses");
+    addTravelExpenses = document.getElementById("go_subtotal");
     addTotalAmount = document.getElementById("total_amount");
     addSubtotal.innerHTML = "";
+    addTravelExpenses.innerHTML = "";
     addTotalAmount.innerHTML = "";
     nextDishes.innerHTML = renderImgDishes();
     for (let index = 0; index < myDishes.length; index++) {
         nextDishes.innerHTML += renderDishes(index);
     }
-    addSubtotal.innerHTML = renderSubtotal();
-    addTotalAmount.innerHTML = renderTotalAmount();
+    renderAllCosts();
 }
 
+// go to all render-function for costs
+function renderAllCosts() {
+    addSubtotal.innerHTML = renderSubtotal();
+    addTravelExpenses.innerHTML = renderTravelExpenses();
+    addTotalAmount.innerHTML = renderTotalAmount();
+}
 
 function addDishes(index) {
     dishesAdd.innerHTML = "";
@@ -25,7 +32,9 @@ function addDishes(index) {
         if (myDishes[index].amount > 0) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
-    }
+    };
+    addSubtotal.innerHTML = renderSubtotal();
+    addTotalAmount.innerHTML = renderTotalAmount();
 }
 
 
@@ -39,6 +48,8 @@ function reduceDishes(index) {
             }
         }
     };
+    addSubtotal.innerHTML = renderSubtotal();
+    addTotalAmount.innerHTML = renderTotalAmount();
 }
 
 
@@ -50,4 +61,6 @@ function clearDishes(index) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
     }
+    addSubtotal.innerHTML = renderSubtotal();
+    addTotalAmount.innerHTML = renderTotalAmount();
 }

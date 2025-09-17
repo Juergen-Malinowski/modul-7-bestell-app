@@ -48,22 +48,41 @@ function renderTotalAmount() {
 function renderAddDishes(index) {
     return `
         <p class="basket_meal">${myDishes[index].meal}</p>
-
-    <div class="icons_position"> 
-
-        <div class="icons_disply_row">  
-            <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
-                onclick="addDishes(${index})" alt="plus-button">
-            <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
-            <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
-                onclick="reduceDishes(${index})" alt="minus-button"> 
-        </div>             
+        <div class="icons_position"> 
+            <div class="icons_disply_row">  
+                <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
+                    onclick="addDishes(${index})" alt="plus-button">
+                <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
+                <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
+                    onclick="reduceDishes(${index})" alt="minus-button"> 
+            </div>             
         
-        <div class="icons_disply_row_rubbish">   
-            <p class="icon_grafik">${showEuroValue(myDishes[index].amount * myDishes[index].price)}</p>        
-            <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
-                onclick="clearDishes(${index})" alt="rubbish-button">             
-        </div>           
-    </div>  
+            <div class="icons_disply_row_rubbish">   
+                <p class="icon_grafik">${showEuroValue(myDishes[index].amount * myDishes[index].price)}</p>        
+                <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
+                    onclick="clearDishes(${index})" alt="rubbish-button">             
+            </div>           
+        </div>  
     `
+}
+
+function renderOrder() {
+    return `
+    
+    `
+}
+
+
+function renderOrderError() {
+    return`
+        <div class="box_for_error">
+            <button class="error_order_button" onclick="errorOrderClear()">
+                Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.</button>
+        </div>
+    `
+}
+
+
+function errorOrderClear() {
+    return
 }

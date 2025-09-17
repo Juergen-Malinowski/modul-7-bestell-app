@@ -86,9 +86,30 @@ function showEuroValue(value_number) {
     // function get value als parameter "value_number"
     // function give back a string in correct EURO-Format
     return new Intl.NumberFormat('de-DE', {
-    style: 'currency',
-    currency: 'EUR',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  }).format(value_number);
+        style: 'currency',
+        currency: 'EUR',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(value_number);
+}
+
+function placeTheOrder() {
+    // do the order for the shopping-basket
+    console.log("Gesamtpreis : ", totalAmount);
+
+    if (totalAmount > 0) {
+        // order is OK
+        renderOrder();
+    } else {
+        // ERROR - there is NO order !
+        let errorMessage = document.getElementById("errorOrder");
+        errorMessage.innerHTML = "";
+        errorMessage.innerHTML = renderOrderError();
+        // alert("Ihr Warenkorb ist leer!");
+    }
+}
+
+function errorOrderClear() {
+    // clear error-order-window
+
 }

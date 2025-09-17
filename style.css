@@ -234,3 +234,28 @@ h2 {
     color: white;
     border-radius: 10px 10px 10px 10px;
 }
+
+
+.button_grafik:hover {
+    font-size: 28px;
+    /* color: white;
+    border-radius: 10px 10px 10px 10px; */
+}
+
+.box_for_error {
+    width: 300px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.error_order_button {
+    font-size: 20px;
+    background-color: yellow;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+    
+}

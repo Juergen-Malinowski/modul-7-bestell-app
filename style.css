@@ -19,6 +19,11 @@ h2 {
     margin-bottom: 30px;
 }
 
+.footer_grafik {
+    display: flex;
+    gap: 100px;
+}
+
 
 /* CLASS for header */
 .header_grafik {

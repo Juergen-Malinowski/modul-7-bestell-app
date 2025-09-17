@@ -81,3 +81,15 @@ function clearDishes(index) {
     }
     renderAllCosts();
 }
+
+function showEuroValue(value_number) {
+    // function get value als parameter "value_number"
+    // function give back a string in correct EURO-Foram
+    return new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(value_number);
+}
+

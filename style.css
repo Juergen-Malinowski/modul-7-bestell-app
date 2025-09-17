@@ -243,19 +243,38 @@ h2 {
 }
 
 .box_for_order {
-    width: 300px;
-    height: 80px;
+    width: 290px;
+    height: 140px;
     background-color: white;
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    
+}
+
+.box_for_order:hover {
+    width: 300px;
+    height: 150px;
 }
 
 .order_box {
     font-size: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.box_for_ErrorOrder {
+    width: 290px;
+    height: 140px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.order_box_error {
+    font-size: 20px;
     background-color: yellow;
     margin: 10px;
     border-radius: 10px 10px 10px 10px;
-    
 }

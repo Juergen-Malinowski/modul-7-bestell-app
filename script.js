@@ -5,6 +5,7 @@ dishesAdd.innerHTML = "";
 let subTotal = 0;
 let totalAmount = 0;
 let errorMarker = false;
+let makeOrder = false;
 
 function initOnload() {
     nextDishes = document.getElementById("show_dishes");
@@ -21,6 +22,17 @@ function initOnload() {
     renderAllCosts();
 }
 
+
+function addDishes(index) {
+    dishesAdd.innerHTML = "";
+    myDishes[index].amount = myDishes[index].amount + 1;
+    for (let index = 0; index < myDishes.length; index++) {
+        if (myDishes[index].amount > 0) {
+            dishesAdd.innerHTML += renderAddDishes(index);
+        }
+    };
+    renderAllCosts();
+}
 
 function renderAllCosts(index) {
     // go to ALL render-function for COSTS
@@ -48,19 +60,6 @@ function getPriceSubTotal() {
         totalAmount = subTotal + 5.00;
     }
 }
-
-
-function addDishes(index) {
-    dishesAdd.innerHTML = "";
-    myDishes[index].amount = myDishes[index].amount + 1;
-    for (let index = 0; index < myDishes.length; index++) {
-        if (myDishes[index].amount > 0) {
-            dishesAdd.innerHTML += renderAddDishes(index);
-        }
-    };
-    renderAllCosts();
-}
-
 
 function reduceDishes(index) {
     if (myDishes[index].amount > 0) {
@@ -102,7 +101,10 @@ function placeTheOrder() {
     // do the order for the shopping-basket
     if (totalAmount > 0) {
         // order is OK
-        renderOrder();
+        makeOrder = true;
+        let orderBox = document.getElementById("errorOrder");
+        orderBox.innerHTML = "";
+        orderBox.innerHTML = renderOrder();
     } else {
         // ERROR - there is NO order !
         errorMarker = true;
@@ -116,4 +118,18 @@ function clearErrorMessage() {
     // clear error-order-window
     let errorMessage = document.getElementById("errorOrder");
     errorMessage.innerHTML = "";
+    // if the order to clear the box came from the Button "placeTheOrder"
+    if (makeOrder) {
+        clearBasket();
+        makeOrder = false;
+    }
+}
+
+function clearBasket() {
+    // clear the shopping basket after the order is made
+    for (let index = 0; index < myDishes.length; index++) {
+        myDishes[index].amount = 0;        
+    }
+    dishesAdd.innerHTML = "";
+    renderAllCosts();
 }

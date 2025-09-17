@@ -21,6 +21,27 @@ function renderDishes(index) {
 }
 
 
+function renderAddDishes(index) {
+    return `
+        <p class="basket_meal">${myDishes[index].meal}</p>
+        <div class="icons_position"> 
+            <div class="icons_disply_row">  
+                <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
+                    onclick="addDishes(${index})" alt="plus-button">
+                <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
+                <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
+                    onclick="reduceDishes(${index})" alt="minus-button"> 
+            </div>             
+        
+            <div class="icons_disply_row_rubbish">   
+                <p class="icon_grafik">${showEuroValue(myDishes[index].amount * myDishes[index].price)}</p>        
+                <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
+                    onclick="clearDishes(${index})" alt="rubbish-button">             
+            </div>           
+        </div>  
+    `
+}
+
 function renderSubtotal() {
     return `
         <span class="basket_subtotal">Warenkorb:</span>
@@ -43,39 +64,23 @@ function renderTotalAmount() {
     `
 }
 
-function renderAddDishes(index) {
-    return `
-        <p class="basket_meal">${myDishes[index].meal}</p>
-        <div class="icons_position"> 
-            <div class="icons_disply_row">  
-                <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
-                    onclick="addDishes(${index})" alt="plus-button">
-                <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
-                <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
-                    onclick="reduceDishes(${index})" alt="minus-button"> 
-            </div>             
-        
-            <div class="icons_disply_row_rubbish">   
-                <p class="icon_grafik">${showEuroValue(myDishes[index].amount * myDishes[index].price)}</p>        
-                <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
-                    onclick="clearDishes(${index})" alt="rubbish-button">             
-            </div>           
-        </div>  
-    `
-}
 
 function renderOrder() {
     return `
-    
+        <div class="box_for_order">
+            <button class="order_box" onclick="clearErrorMessage()">
+                Vielen Dank für Ihre TEST-Bestellung. Sie wurde ausgeführt!
+                Bitte mit Klick bestätigen!</button>
+        </div>    
     `
 }
 
-
 function renderOrderError() {
     return`
-        <div class="box_for_order">
-            <p class="order_box">
-                Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.</p>
+        <div class="box_for_ErrorOrder">
+            <button class="order_box_error">
+                Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.
+            </button>
         </div>
     `
 }

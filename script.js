@@ -84,7 +84,7 @@ function clearDishes(index) {
 
 function showEuroValue(value_number) {
     // function get value als parameter "value_number"
-    // function give back a string in correct EURO-Foram
+    // function give back a string in correct EURO-Format
     return new Intl.NumberFormat('de-DE', {
     style: 'currency',
     currency: 'EUR',
@@ -92,19 +92,3 @@ function showEuroValue(value_number) {
     maximumFractionDigits: 2
   }).format(value_number);
 }
-
-
-// // FUNCTION für Zahlen im Euro-Format
-// function formatEuroBetrag(betrag) {
-//   // Betragswert als Zahl erwartet
-//   return new Intl.NumberFormat('de-DE', {
-//     style: 'currency',
-//     currency: 'EUR',
-//     minimumFractionDigits: 2,
-//     maximumFractionDigits: 2
-//   }).format(betrag); // Betrag wird als String zurückgegeben
-// }
-
-// // Beispiele
-// console.log(formatEuroBetrag(1234.56));   // "1.234,56 €"
-// console.log(formatEuroBetrag(1000));      // "1.000,00 €"

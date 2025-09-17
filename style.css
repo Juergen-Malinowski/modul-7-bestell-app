@@ -86,7 +86,6 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .single_dishes_meal {
@@ -103,6 +102,11 @@ h2 {
     height: 50px;
     background-color: white;
     margin-right: 20px;
+}
+
+.plus_grafik:hover {
+    width: 70px;
+    height: 70px;
 }
 
 .single_dishes_discription {
@@ -122,14 +126,16 @@ h2 {
     padding-left: 5px;
 }
 
+
+
+/* CLASS for shoppingbasket */
 .basket_grafik {
+    position:sticky;
+    top: 0;
     border-radius: 20px 20px 20px 20px;
     background-color: white;
 }
 
-
-
-/* CLASS for shoppingbasket */
 .selection_grafik {
     background-color: white;
 }
@@ -192,7 +198,11 @@ h2 {
     height: 20px;
     background-color: white;
     margin-left: 5px;
-    /* margin-right: 20px; */
+}
+
+.icon_grafik:hover {
+    width: 25px;
+    height: 25px;
 }
 
 .icon_grafik_rubbish {
@@ -200,4 +210,9 @@ h2 {
     height: 20px;
     background-color: white;
     margin-left: 5px;
+}
+
+.icon_grafik_rubbish:hover {
+    width: 25px;
+    height: 25px;
 }

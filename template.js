@@ -30,15 +30,15 @@ function renderAddDishes(index) {
         <div class="icons_disply_row">  
             <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
                 onclick="addDishes(${index})" alt="plus-button">
-            <p class="icon_grafik">${myDishes[index].amount}x</p>
+            <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
             <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
-                onclick="addDishes(${index})" alt="plus-button"> 
+                onclick="reduceDishes(${index})" alt="minus-button"> 
         </div>             
         
         <div class="icons_disply_row_rubbish">   
             <p class="icon_grafik">${myDishes[index].amount*myDishes[index].price}€</p>
-            <img class="icon_grafik_rubbish" src="./assets/Logo/icons8-mülleimer-50.png" 
-                onclick="addDishes(${index})" alt="plus-button">             
+            <img class="icon_grafik_rubbish" src="./assets/Logo/rubbish.png" 
+                onclick="clearDishes(${index})" alt="rubbish-button">             
         </div>           
     </div>  
     `

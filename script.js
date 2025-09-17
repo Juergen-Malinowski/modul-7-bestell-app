@@ -12,13 +12,37 @@ function initOnload() {
     }
 }
 
+
 function addDishes(index) {
+    dishesAdd.innerHTML = "";
     myDishes[index].amount = myDishes[index].amount + 1;
-    switch (myDishes[index].amount - 1) {
-        case 0:
+    for (let index = 0; index < myDishes.length; index++) {
+        if (myDishes[index].amount > 0) {
             dishesAdd.innerHTML += renderAddDishes(index);
-            break;        
-        default:
-            break;
+        }
+    }
+}
+
+
+function reduceDishes(index) {
+    if (myDishes[index].amount > 0) {
+        myDishes[index].amount = myDishes[index].amount - 1;
+        dishesAdd.innerHTML = "";
+        for (let index = 0; index < myDishes.length; index++) {
+            if (myDishes[index].amount > 0) {
+                dishesAdd.innerHTML += renderAddDishes(index);
+            }
+        }
+    };
+}
+
+
+function clearDishes(index) {
+    myDishes[index].amount = 0;
+    dishesAdd.innerHTML = "";
+    for (let index = 0; index < myDishes.length; index++) {
+        if (myDishes[index].amount > 0) {
+            dishesAdd.innerHTML += renderAddDishes(index);
+        }
     }
 }

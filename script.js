@@ -115,10 +115,10 @@ function placeTheOrder() {
 }
 
 function clearErrorMessage() {
-    // clear error-order-window
+    // CLEAR error-order-box AND clear message-box after ORDER
     let errorMessage = document.getElementById("errorOrder");
     errorMessage.innerHTML = "";
-    // if the order to clear the box came from the Button "placeTheOrder"
+    // CLEAR shopping-basket after ORDER
     if (makeOrder) {
         clearBasket();
         makeOrder = false;

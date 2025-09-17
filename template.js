@@ -23,9 +23,8 @@ function renderDishes(index) {
 
 function renderSubtotal() {
     return `
-<p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
-        <span class="basket_subtotal">Zwischensumme:</span>
-        <span class="basket_subtotal">0,00 €</span>
+        <span class="basket_subtotal">Warenkorb:</span>
+        <span class="basket_subtotal">${subTotal}€ </span>
     `
 }
 
@@ -36,10 +35,11 @@ function renderTravelExpenses() {
     `
 }
 
+
 function renderTotalAmount() {
     return `
         <span class="basket_total">Gesamtpreis:</span>
-        <span class="basket_total">0,00 €</span>    
+        <span class="basket_total">${totalAmount}€</span>    
     `
 
 }

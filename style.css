@@ -19,9 +19,28 @@ h2 {
     margin-bottom: 30px;
 }
 
+h3 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    /* background-color: rgba(220, 118, 36, 0.988); */
+}
+
+
 .footer_grafik {
     display: flex;
     gap: 100px;
+}
+
+/* CLASS for impressum */
+.headline_grafik {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -52,6 +71,49 @@ h2 {
     flex-direction: row;
     flex-grow: 1;
     gap: 3px;
+}
+
+.sort_header_nav {
+    background-color: rgba(220, 118, 36, 0.988);
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_grafik {
+    margin-right: 10px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.start_grafik {
+    font-size: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.start_grafik:hover {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.contact_grafik {
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.contact_grafik:hover {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.impressum_grafik {
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.impressum_grafik:hover {
+    font-size: 22px;
+    text-decoration: underline;
 }
 
 
@@ -99,7 +161,7 @@ h2 {
     height: 150px;
     border-style: double;
     border-color: black;
-    border-width: 10px;    
+    border-width: 10px;
     background-color: white;
     border-radius: 50% 50% 50% 50%;
     position: absolute;

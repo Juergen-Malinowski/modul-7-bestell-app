@@ -41,6 +41,15 @@ h3 {
     color: yellow;
 }
 
+.privacy_policy {
+    color: white;
+}
+
+
+.privacy_policy:hover {
+    color: yellow;
+}
+
 
 /* CLASS for impressum */
 .headline_grafik {

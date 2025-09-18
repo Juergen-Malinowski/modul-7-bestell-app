@@ -27,9 +27,18 @@ h3 {
     margin-bottom: 20px;
 }
 
+/* CLASS for footer */
 .footer_grafik {
     display: flex;
     gap: 100px;
+}
+
+.icon_thanks {
+    color: white;
+}
+
+.icon_thanks:hover {
+    color: yellow;
 }
 
 

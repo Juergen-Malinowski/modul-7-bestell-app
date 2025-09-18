@@ -66,13 +66,33 @@ h2 {
     margin: 10px 3px 0 20px;
 }
 
+.icon_position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .img_grafik {
     width: 99%;
     height: 200px;
     margin: 10px 0 5px 20px;
-    border-radius: 50% 50% 50% 50%;
-    /* border-radius: 20px 20px 20px 20px; */
+    /* border-radius: 50% 50% 50% 50%; */
+    border-radius: 20px 20px 20px 20px;
     object-fit: cover;
+}
+
+.icon_wok_grafik {
+    background-color: aqua;
+}
+
+.icon_wok {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50% 50% 50% 50%;
+    border: 10px;
+    border-color: black;
+    padding-bottom: 50px;
 }
 
 .single_dishes {

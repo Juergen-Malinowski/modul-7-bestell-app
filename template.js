@@ -2,7 +2,12 @@
 
 function renderImgDishes() {
     return `
-        <img class="img_grafik" src="./assets/img/wok.jpg" alt="WOK-Bild">
+        <div class="icon_position">
+            <img class="img_grafik" src="./assets/img/wok.jpg" alt="WOK-Bild">
+            <div class="icon_wok_grafik">
+                <img class="icon_wok" src="./assets/Logo/wok.png" alt="WOK-ICON">        
+            </div>
+        </div>
     `
 }
 

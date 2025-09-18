@@ -27,28 +27,78 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* CLASS for footer */
-.footer_grafik {
+
+/* CLASS for header */
+.header_grafik {
+    background-color: rgba(220, 118, 36, 0.988);
     display: flex;
-    gap: 100px;
 }
 
-.icon_thanks {
-    color: white;
-    margin-left: 5px;
+.bestell_logo {
+    width: 200px;
+    height: auto;
+    background-color: rgba(220, 118, 36, 0.988);
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
-.icon_thanks:hover {
+.evaluation_grafik {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.my_restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 3px;
+}
+
+.sort_header_nav {
+    background-color: rgba(220, 118, 36, 0.988);
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_grafik {
+    margin-right: 10px;
+    background-color: rgba(220, 118, 36, 0.988);
+    display: flex;
+}
+
+.start_grafik {
+    font-size: 30px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.start_grafik:hover {
     color: yellow;
+    text-decoration: underline;
 }
 
-.privacy_policy {
-    color: white;
+.contact_grafik {
+    font-size: 30px;
+    margin-left: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
 }
 
-
-.privacy_policy:hover {
+.contact_grafik:hover {
     color: yellow;
+    text-decoration: underline;
+}
+
+.impressum_grafik {
+    font-size: 30px;
+    margin-left: 20px;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.impressum_grafik:hover {
+    color: yellow;
+    text-decoration: underline;
 }
 
 
@@ -153,79 +203,30 @@ h3 {
 }
 
 
-/* CLASS for header */
-.header_grafik {
-    background-color: rgba(220, 118, 36, 0.988);
+
+/* CLASS for footer */
+.footer_grafik {
     display: flex;
+    gap: 100px;
 }
 
-.bestell_logo {
-    width: 200px;
-    height: auto;
-    background-color: rgba(220, 118, 36, 0.988);
-    padding-top: 20px;
-    padding-left: 10px;
+.icon_thanks {
+    color: white;
+    margin-left: 5px;
 }
 
-.evaluation_grafik {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-left: 10px;
-    background-color: rgba(220, 118, 36, 0.988);
+.icon_thanks:hover {
+    color: yellow;
 }
 
-.my_restaurant {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    gap: 3px;
+.privacy_policy {
+    color: white;
 }
 
-.sort_header_nav {
-    background-color: rgba(220, 118, 36, 0.988);
-    display: flex;
-    justify-content: space-between;
-}
 
-.nav_grafik {
-    margin-right: 10px;
-    background-color: rgba(220, 118, 36, 0.988);
-    display: flex;
+.privacy_policy:hover {
+    color: yellow;
 }
-
-.start_grafik {
-    font-size: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
-}
-
-.start_grafik:hover {
-    font-size: 22px;
-    text-decoration: underline;
-}
-
-.contact_grafik {
-    font-size: 20px;
-    margin-left: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
-}
-
-.contact_grafik:hover {
-    font-size: 22px;
-    text-decoration: underline;
-}
-
-.impressum_grafik {
-    font-size: 20px;
-    margin-left: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
-}
-
-.impressum_grafik:hover {
-    font-size: 22px;
-    text-decoration: underline;
-}
-
 
 
 /* CLASS for all dishes */

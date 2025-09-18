@@ -133,3 +133,4 @@ function clearBasket() {
     dishesAdd.innerHTML = "";
     renderAllCosts();
 }
+

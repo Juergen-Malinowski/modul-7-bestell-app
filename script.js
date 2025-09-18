@@ -134,3 +134,22 @@ function clearBasket() {
     renderAllCosts();
 }
 
+
+// SEND E-Mail
+function sendMail(event){
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch("https://formspree.io/f/xnnzkyyk", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        // window.location.replace("./mail_confirmation.html");
+        window.location.href = "./mail_confirmation.html";
+    }).catch((error) => {
+        console.log(error);
+    });
+}

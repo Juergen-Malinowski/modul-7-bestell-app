@@ -36,25 +36,13 @@
             </div>
         </div>
 
-        <!-- SEND MAIL ... needs function sendMail() and mail_confirmation.html -->
-        <form onsubmit="if(this.checkValidity()) 
-            { sendMail(event); } else { return false; }">
-            <div class="contact_grafik_mail">
-                <p class="headline_grafik_mail">Kontaktiere uns ...</p>
-                <div class="input_position">
-                    <label for="fname" class="label_grafik">Ihr Name:</label>
-                    <input class="input_grafik" type="text" id="fname" name="fname" placeholder="Max Mustermann"
-                        required minlength="2">
-                    <label for="email" class="label_grafik">Ihre Mail-Adresse:</label>
-                    <input class="input_grafik" type="email" id="email" name="email" placeholder="Mustermann@mail.de"
-                        required>
-                    <label for="message" class="label_grafik">Ihre Nachricht:</label>
-                    <textarea class="input_grafik" id="message" name="message" placeholder="Ihre Nachricht?" required
-                        minlength="5"></textarea>
-                    <button class="send_button" type="submit">Mail absenden</button>
-                </div>
+        <section>
+            <div class="mail_confirmation">
+                <h3>Deine Nachricht wurde verschickt</h3>
             </div>
-        </form>
+        </section>
+
+
 
 
     </section>

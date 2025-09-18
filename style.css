@@ -53,12 +53,37 @@ h3 {
 
 
 /* CLASS for impressum */
+.box_position_im {
+    display: flex;
+    justify-content: center;
+}
+
+.box_grafik {
+    width: 450px;
+    height: 550px;
+    border-radius: 20px 20px 20px 20px;
+    border-style: groove;
+    border-color: black;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .headline_grafik {
     font-size: 20px;
     font-weight: bold;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.icon_thanks_im {
+    text-align: center;
+}
+
+.icon_thanks_im:hover {
+    color: yellow;
 }
 
 
@@ -72,9 +97,9 @@ h3 {
 .input_position {
     width: 800px;
     height: 300px;
-    border-style:groove;
+    border-style: groove;
     border-color: black;
-    border-width: 5px;    
+    border-width: 5px;
     background-color: rgba(220, 118, 36, 0.988);
     border-radius: 20px 20px 20px 20px;
     display: flex;
@@ -85,9 +110,9 @@ h3 {
 .headline_grafik_mail {
     width: 500px;
     font-size: 40px;
-    border-style:groove;
+    border-style: groove;
     border-color: black;
-    border-width: 5px;      
+    border-width: 5px;
     color: white;
     background-color: rgba(220, 118, 36, 0.988);
     border-radius: 20px 20px 20px 20px;

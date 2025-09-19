@@ -502,3 +502,16 @@ h3 {
     margin: 10px;
     border-radius: 10px 10px 10px 10px;
 }
+
+.button_open_basket {
+    width: 310px;
+    height: 100px;
+    font-size: 25px;
+    background-color: yellow;
+    font-weight: bold;
+    border-style: double;
+    border-color: black;
+    border-width: 5px;
+    position: fixed;
+    bottom: 0;
+}

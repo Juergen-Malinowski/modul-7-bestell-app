@@ -1,5 +1,6 @@
 // Basis JS-Datei
 
+// DEFINITION Variables
 let dishesAdd = document.getElementById("select_dishes");
 dishesAdd.innerHTML = "";
 let subTotal = 0;
@@ -7,13 +8,24 @@ let totalAmount = 0;
 let errorMarker = false;
 let makeOrder = false;
 let mediaMobile = false;
+let mediaWidth = window.innerWidth;
+// for shopping-basket ...
+let nextDishes = document.getElementById("show_dishes");
+let addSubtotal = document.getElementById("travel_expenses");
+let addTravelExpenses = document.getElementById("go_subtotal");
+let addTotalAmount = document.getElementById("total_amount");
+addSubtotal.innerHTML = "";
+addTravelExpenses.innerHTML = "";
+addTotalAmount.innerHTML = "";
+// for CONTROL dishes AND shopping-basket ...
 let sectionDishes = document.getElementById("section_dishes");
 let sectionBasket = document.getElementById("section_basket");
+let controlButton = document.getElementById("button_open_close");
 
 
 function checkMediaWidth() {
     // checking for nessesary mobile_style.css
-    let mediaWidth = window.innerWidth;
+    // let mediaWidth = window.innerWidth;
     if (mediaWidth < 768) {
         mediaMobile = true;
     } else {
@@ -24,19 +36,19 @@ function checkMediaWidth() {
 function initOnload() {
     // first load html
     // first check to get Mobile-Style ...
+
+
+    // document.getElementById("button_open_close").style.display === "none";
+    // controlButton.style.display === "none";
+
+
     checkMediaWidth();
     // eventListener now running all time and check vor Mobile-Style nessesary
     window.addEventListener("resize", () => {
         checkMediaWidth();
         makeChangeClassForInit();
+        toggleBasketForMobile();
     });
-    nextDishes = document.getElementById("show_dishes");
-    addSubtotal = document.getElementById("travel_expenses");
-    addTravelExpenses = document.getElementById("go_subtotal");
-    addTotalAmount = document.getElementById("total_amount");
-    addSubtotal.innerHTML = "";
-    addTravelExpenses.innerHTML = "";
-    addTotalAmount.innerHTML = "";
     nextDishes.innerHTML = renderImgDishes();
     makeChangeClassForInit();
     for (let index = 0; index < myDishes.length; index++) {
@@ -209,3 +221,29 @@ function sendMail(event) {
         console.log(error);
     });
 }
+
+
+// function toggleBasketForMobile() {
+//     // mobile_style.css < 441px ... toggle Basket to hide / to show
+
+//     let controlButton = document.getElementById("button_open_close");
+//     switch (mediaWidth) {
+//         case mediaWidth < 441:
+//             // don´t show button "open/close"
+//             controlButton.style.display === "block";
+//             // switch the shopping-basket
+//             if (sectionBasket.style.display === "none") {
+//                 sectionBasket.style.display = "block";
+//             } else {
+//                 sectionBasket.style.display = "none";
+//             }
+//             break;
+//         case mediaWidth >= 441:
+//             // don´t show button "open/close"
+//             controlButton.style.display === "none";
+
+//             break;
+
+//     }
+// }
+

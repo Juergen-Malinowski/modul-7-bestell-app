@@ -229,7 +229,7 @@ h3 {
 }
 
 .copyright_jm {
-    font-size: 30px;
+    font-size: 24px;
     color: yellow;
 }
 
@@ -240,12 +240,28 @@ h3 {
     flex-grow: 1;
 }
 
+.dishes_mobile {
+    /* changes the basic HTML structure 
+    for MOBILE up to 767px FOR dishes */
+    width: 100vh;
+    overflow-x: hidden;
+}
+
 .shopping_basket {
     width: 300px;
     flex-grow: 1;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
     margin: 10px 3px 0 20px;
+}
+
+.shopping_basket_mobile {
+    /* changes the basic HTML structure 
+    for MOBILE up to 767px FOR shopping-basket */
+    position: fixed;
+    bottom: 0;
+    width: 100vh;
+    overflow-x: hidden;
 }
 
 .icon_position {

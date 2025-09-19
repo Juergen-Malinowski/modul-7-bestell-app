@@ -7,10 +7,26 @@ let totalAmount = 0;
 let errorMarker = false;
 let makeOrder = false;
 let mediaMobile = false;
+let sectionDishes = document.getElementById("section_dishes");
+let sectionBasket = document.getElementById("section_basket");
+
+function checkMediaWidth() {
+    // checking for nessesary mobile_style.css
+    let mediaWidth = window.innerWidth;
+    if (mediaWidth < 768) {
+        mediaMobile = true;
+    } else {
+        mediaMobile = false;
+    }
+}
 
 function initOnload() {
     // first load html
     checkMediaWidth();
+    window.addEventListener("resize", () => {
+        checkMediaWidth();
+        makeChangeClassForInit();
+    });
     nextDishes = document.getElementById("show_dishes");
     addSubtotal = document.getElementById("travel_expenses");
     addTravelExpenses = document.getElementById("go_subtotal");
@@ -19,12 +35,29 @@ function initOnload() {
     addTravelExpenses.innerHTML = "";
     addTotalAmount.innerHTML = "";
     nextDishes.innerHTML = renderImgDishes();
+    makeChangeClassForInit();
     for (let index = 0; index < myDishes.length; index++) {
         // render the card with all dishes
         nextDishes.innerHTML += renderDishes(index);
     }
     // render all costs-items of shopping-basket
     renderAllCosts();
+}
+
+function makeChangeClassForInit() {
+    // depending on Boolean from "mediaMobile" use 
+    // the mobile-Class OR switch back
+    if (mediaMobile) {
+        sectionDishes.classList.remove("dishes");
+        sectionDishes.classList.add("dishes_mobile")
+        sectionBasket.classList.remove("shopping_basket");
+        sectionBasket.classList.add("shopping_basket_mobile")
+    } else {
+        sectionDishes.classList.remove("dishes_mobile")
+        sectionDishes.classList.add("dishes");
+        sectionBasket.classList.remove("shopping_basket_mobile")
+        sectionBasket.classList.add("shopping_basket");
+    }
 }
 
 
@@ -172,14 +205,4 @@ function sendMail(event) {
     }).catch((error) => {
         console.log(error);
     });
-}
-
-function checkMediaWidth() {
-    // checking for nessesary mobile_style.css
-    let mediaWidth = window.innerWidth;
-    if (mediaWidth < 768) {
-        mediaMobile = true;
-    } else {
-        mediaMobile = false;
-    }
 }

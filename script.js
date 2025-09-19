@@ -10,6 +10,7 @@ let mediaMobile = false;
 let sectionDishes = document.getElementById("section_dishes");
 let sectionBasket = document.getElementById("section_basket");
 
+
 function checkMediaWidth() {
     // checking for nessesary mobile_style.css
     let mediaWidth = window.innerWidth;
@@ -22,7 +23,9 @@ function checkMediaWidth() {
 
 function initOnload() {
     // first load html
+    // first check to get Mobile-Style ...
     checkMediaWidth();
+    // eventListener now running all time and check vor Mobile-Style nessesary
     window.addEventListener("resize", () => {
         checkMediaWidth();
         makeChangeClassForInit();

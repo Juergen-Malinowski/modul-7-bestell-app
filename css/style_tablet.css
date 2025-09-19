@@ -1,0 +1,140 @@
+@media (max-width: 1100px) {
+
+    /* CLASS for header */
+    h1 {
+        font-size: 3em;
+        margin-left: 160px;
+        padding-top: 10px;
+    }
+
+    .bestell_logo {
+        width: 120px;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .start_grafik {
+        font-size: 24px;
+    }
+
+    .contact_grafik {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .impressum_grafik {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .evaluation_grafik {
+        font-size: 16px;
+        padding-top: 5px;
+    }
+
+    .img_grafik {
+        height: 160px;
+        margin: 10px 0 70px 10px;
+    }
+
+    .icon_wok_grafik {
+        padding-right: 120px;
+    }
+
+    .icon_wok {
+        width: 120px;
+        height: 120px;
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+        top: 195px;
+    }
+
+    /* CLASS for all dishes */
+    .single_dishes {
+        height: 140px;
+    }
+
+    .single_dishes_meal {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .single_dishes_discription {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .single_dishes_price {
+        font-size: 24px;
+    }
+
+    .plus_grafik {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    .plus_grafik:hover {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* CLASS for shoppingbasket */
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .basket_meal {
+        font-size: 12px;
+        background-color: white;
+        margin-left: 5px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+
+    .button_grafik {
+        font-size: 20px;
+    }
+
+    .button_grafik:hover {
+        font-size: 24px;
+    }
+
+    .box_for_order {
+        width: 100%;
+        height: 110px;
+    }
+
+    .order_box {
+        font-size: 16px;
+        margin: 8px;
+    }
+
+    .box_for_ErrorOrder {
+        /* width: 230px; */
+        width: 100%;
+        height: 110px;
+    }
+
+    .order_box_error {
+        font-size: 16px;
+        margin: 8px;
+    }
+
+    /* CLASS for footer */
+    .copyright_jm {
+        font-size: 18px;
+    }
+
+    /* CLASS for impressum */
+    
+
+
+}
+
+
+
+@media (max-width: 940px) {}

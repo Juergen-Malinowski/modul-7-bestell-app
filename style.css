@@ -102,6 +102,36 @@ h3 {
 }
 
 
+/* CLASS for footer */
+.footer_grafik {
+    display: flex;
+    gap: 100px;
+}
+
+.icon_thanks {
+    color: white;
+    margin-left: 5px;
+}
+
+.icon_thanks:hover {
+    color: yellow;
+}
+
+.privacy_policy {
+    color: white;
+}
+
+
+.privacy_policy:hover {
+    color: yellow;
+}
+
+.copyright_jm {
+    font-size: 24px;
+    color: yellow;
+}
+
+
 /* CLASS for impressum */
 .box_position_im {
     display: flex;
@@ -204,35 +234,6 @@ h3 {
 
 
 
-/* CLASS for footer */
-.footer_grafik {
-    display: flex;
-    gap: 100px;
-}
-
-.icon_thanks {
-    color: white;
-    margin-left: 5px;
-}
-
-.icon_thanks:hover {
-    color: yellow;
-}
-
-.privacy_policy {
-    color: white;
-}
-
-
-.privacy_policy:hover {
-    color: yellow;
-}
-
-.copyright_jm {
-    font-size: 24px;
-    color: yellow;
-}
-
 
 /* CLASS for all dishes */
 .dishes {
@@ -278,7 +279,7 @@ h3 {
 .img_grafik {
     width: 99%;
     height: 200px;
-    margin: 10px 0 90px 20px;
+    margin: 10px 0 90px 10px;
     border-style: double;
     border-color: black;
     border-width: 10px;
@@ -327,18 +328,6 @@ h3 {
     margin-left: 5px;
 }
 
-.plus_grafik {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    margin-right: 20px;
-}
-
-.plus_grafik:hover {
-    width: 70px;
-    height: 70px;
-}
-
 .single_dishes_discription {
     font-size: 18px;
     background-color: white;
@@ -356,6 +345,17 @@ h3 {
     padding-left: 5px;
 }
 
+.plus_grafik {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.plus_grafik:hover {
+    width: 70px;
+    height: 70px;
+}
 
 
 /* CLASS for shoppingbasket */
@@ -376,7 +376,7 @@ h3 {
 }
 
 .basket_meal {
-    font-size: 12px;
+    font-size: 14px;
     background-color: white;
     margin-left: 5px;
     margin-top: 8px;
@@ -463,12 +463,11 @@ h3 {
 
 .button_grafik:hover {
     font-size: 28px;
-    /* color: white;
-    border-radius: 10px 10px 10px 10px; */
+    color: yellow;
 }
 
 .box_for_order {
-    width: 290px;
+    width: 100%;
     height: 140px;
     background-color: white;
     display: flex;
@@ -489,7 +488,7 @@ h3 {
 }
 
 .box_for_ErrorOrder {
-    width: 290px;
+    width: 100%;
     height: 140px;
     background-color: white;
     display: flex;

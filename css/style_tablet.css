@@ -51,7 +51,7 @@
 
     /* CLASS for all dishes */
     .single_dishes {
-        height: 140px;
+        height: 150px;
     }
 
     .single_dishes_meal {
@@ -71,8 +71,6 @@
     .plus_grafik {
         width: 40px;
         height: 40px;
-        background-color: white;
-        margin-right: 15px;
     }
 
     .plus_grafik:hover {
@@ -130,11 +128,69 @@
     }
 
     /* CLASS for impressum */
-    
+    h3 {
+        font-size: 24px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
 
+    .box_grafik {
+        width: 360px;
+        height: 440px;
+        border-width: 5px;
+    }
 
+    .headline_grafik {
+        font-size: 16px;
+    }
+
+    /* CLASS for contact-mail */
+    .input_position {
+        width: 640px;
+        height: 300px;
+    }
+
+    .headline_grafik_mail {
+        width: 400px;
+        font-size: 32px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 
+@media (max-width: 872px) {
+    .single_dishes_meal {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 
-@media (max-width: 940px) {}
+    .single_dishes_discription {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .single_dishes_price {
+        font-size: 22px;
+    }
+
+    .plus_grafik {
+        width: 33px;
+        height: 33px;
+    }
+
+    .plus_grafik:hover {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* CLASS for footer */
+    .footer_grafik {
+        display: flex;
+        gap: 25px;
+    }
+
+    .copyright_jm {
+        font-size: 16px;
+    }
+}

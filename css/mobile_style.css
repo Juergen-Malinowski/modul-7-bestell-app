@@ -1,7 +1,83 @@
 /* style for mobile up to 767px */
 @media (max-width: 767px) {
-    .m {
-        margin-left: 5px;
+
+    /* CLASS for header */
+    h1 {
+        font-size: 2em;
+        margin-left: 50px;
+    }
+
+    .bestell_logo {
+        width: 100px;
+    }
+
+    .start_grafik {
+        font-size: 18px;
+    }
+
+    .contact_grafik {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .impressum_grafik {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .evaluation_grafik {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    .img_grafik {
+        height: 100px;
+        margin: 5px 0 45px 5px;
+    }
+
+    .icon_wok_grafik {
+        padding-right: 75px;
+    }
+
+    .icon_wok {
+        width: 75px;
+        height: 75px;
+        top: 130px;
+    }
+
+
+
+
+    /* CLASS for all dishes */
+    .single_dishes {
+        height: 150px;
+    }
+
+    .single_dishes_meal {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .single_dishes_discription {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .single_dishes_price {
+        font-size: 24px;
+    }
+
+    .plus_grafik {
+        width: 40px;
+        height: 40px;
+    }
+
+    .plus_grafik:hover {
+        width: 55px;
+        height: 55px;
+
 
     }
 }
+
+@media (max-width: 440px) {}

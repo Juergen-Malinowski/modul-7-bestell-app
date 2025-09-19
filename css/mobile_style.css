@@ -45,38 +45,113 @@
         top: 130px;
     }
 
-
-
-
     /* CLASS for all dishes */
     .single_dishes {
-        height: 150px;
+        height: 100px;
     }
 
     .single_dishes_meal {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 16px;
+        margin-bottom: 7px;
     }
 
     .single_dishes_discription {
-        font-size: 16px;
-        margin-bottom: 15px;
+        font-size: 12px;
+        margin-bottom: 7px;
     }
 
     .single_dishes_price {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .plus_grafik {
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
     }
 
     .plus_grafik:hover {
-        width: 55px;
-        height: 55px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* #################################################################
+  BEARBEITEN, wenn Warenkorb auf Button zum Öffnen geändert wurde 
+#################################################################### */
+    /* CLASS for shoppingbasket */
+    h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .basket_meal {
+        font-size: 12px;
+        background-color: white;
+        margin-left: 5px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+
+    .button_grafik {
+        font-size: 20px;
+    }
+
+    .button_grafik:hover {
+        font-size: 24px;
+    }
+
+    .box_for_order {
+        width: 100%;
+        height: 110px;
+    }
+
+    .order_box {
+        font-size: 16px;
+        margin: 8px;
+    }
+
+    .box_for_ErrorOrder {
+        width: 100%;
+        height: 110px;
+    }
+
+    .order_box_error {
+        font-size: 16px;
+        margin: 8px;
+    }
+
+    /* #################################################################
+  ENDE, offen zur Bearbeitung !!!!!!!!!!
+#################################################################### */
 
 
+    /* CLASS for impressum */
+    h3 {
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    .box_grafik {
+        height: 480px;
+    }
+
+    /* CLASS for contact-mail */
+    .input_position {
+        width: 430px;
+        height: 400px;
+    }
+
+    .headline_grafik_mail {
+        width: 430px;
+    }
+
+    .label_grafik {
+        font-size: 22px;
+    }
+
+    .input_grafik {
+        width: 415px;
+        font-size: 18px;
     }
 }
 

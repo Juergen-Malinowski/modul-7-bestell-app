@@ -1,6 +1,7 @@
-// for JS HTML-Templates
+// JS HTML-Templates
 
 function renderImgDishes() {
+    // render big-img and shop-logo from the APP
     return `
         <div class="icon_position">
             <img class="img_grafik" src="./assets/img/wok.jpg" alt="WOK-Bild">
@@ -11,7 +12,9 @@ function renderImgDishes() {
     `
 }
 
+
 function renderDishes(index) {
+    // render the card with all dishes 
     return `
         <div class="single_dishes">
             <div class="dishes_and_button">
@@ -27,6 +30,7 @@ function renderDishes(index) {
 
 
 function renderAddDishes(index) {
+    // render a new dish in the shopping-basket
     return `
         <p class="basket_meal">${myDishes[index].meal}</p>
         <div class="icons_position"> 
@@ -48,6 +52,7 @@ function renderAddDishes(index) {
 }
 
 function renderSubtotal() {
+    // render prise of shopping-basket from dishes WITHOUT travel-expenses
     return `
         <span class="basket_subtotal">Warenkorb:</span>
         <span class="basket_subtotal">${showEuroValue(subTotal)}</span>
@@ -55,6 +60,7 @@ function renderSubtotal() {
 }
 
 function renderTravelExpenses() {
+    // render costs for travel-expenses
     return `
         <span class="basket_subtotal">Fahrtkosten:</span>
         <span class="basket_subtotal">5,00 €</span>
@@ -63,6 +69,7 @@ function renderTravelExpenses() {
 
 
 function renderTotalAmount() {
+    // render the total-amount of shopping-basket
     return `
         <span class="basket_total">Gesamtpreis:</span>
         <span class="basket_total">${showEuroValue(totalAmount)}</span>    
@@ -71,6 +78,7 @@ function renderTotalAmount() {
 
 
 function renderOrder() {
+    // render the user have made a order
     return `
         <div class="box_for_order">
             <button class="order_box" onclick="clearErrorMessage()">
@@ -81,7 +89,8 @@ function renderOrder() {
 }
 
 function renderOrderError() {
-    return`
+    // render the user have made a order WITHOUT choise a dish
+    return `
         <div class="box_for_ErrorOrder">
             <button class="order_box_error">
                 Ihr Warenkorb ist leer! Bitte treffen Sie Ihre Auswahl.

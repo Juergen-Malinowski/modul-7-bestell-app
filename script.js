@@ -6,8 +6,11 @@ let subTotal = 0;
 let totalAmount = 0;
 let errorMarker = false;
 let makeOrder = false;
+let mediaMobile = false;
 
 function initOnload() {
+    // first load html
+    checkMediaWidth();
     nextDishes = document.getElementById("show_dishes");
     addSubtotal = document.getElementById("travel_expenses");
     addTravelExpenses = document.getElementById("go_subtotal");
@@ -17,13 +20,17 @@ function initOnload() {
     addTotalAmount.innerHTML = "";
     nextDishes.innerHTML = renderImgDishes();
     for (let index = 0; index < myDishes.length; index++) {
+        // render the card with all dishes
         nextDishes.innerHTML += renderDishes(index);
     }
+    // render all costs-items of shopping-basket
     renderAllCosts();
 }
 
 
 function addDishes(index) {
+    checkMediaWidth();
+    // render a new dish in the shopping-basket
     dishesAdd.innerHTML = "";
     myDishes[index].amount = myDishes[index].amount + 1;
     for (let index = 0; index < myDishes.length; index++) {
@@ -31,16 +38,21 @@ function addDishes(index) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
     };
+    // render all costs-items of shopping-basket
     renderAllCosts();
 }
 
 function renderAllCosts(index) {
-    // go to ALL render-function for COSTS
+    checkMediaWidth();
+    // go to ALL render-functions for COSTS of shopping-basket
     if (errorMarker) {
+        // if shopping-basket is emty ... ERROR: frist choise a dish
         errorMarker = false;
         clearErrorMessage();
     }
+    // get SUBTOTAL
     getPriceSubTotal();
+    // render all costs of shopping-basket
     addSubtotal.innerHTML = renderSubtotal(index);
     addTravelExpenses.innerHTML = renderTravelExpenses();
     addTotalAmount.innerHTML = renderTotalAmount();
@@ -62,6 +74,8 @@ function getPriceSubTotal() {
 }
 
 function reduceDishes(index) {
+    checkMediaWidth();
+    // render user have reduce a dish
     if (myDishes[index].amount > 0) {
         myDishes[index].amount = myDishes[index].amount - 1;
         dishesAdd.innerHTML = "";
@@ -76,6 +90,8 @@ function reduceDishes(index) {
 
 
 function clearDishes(index) {
+    checkMediaWidth();
+    // clear the sopping-basket after order
     myDishes[index].amount = 0;
     dishesAdd.innerHTML = "";
     for (let index = 0; index < myDishes.length; index++) {
@@ -98,6 +114,7 @@ function showEuroValue(value_number) {
 }
 
 function placeTheOrder() {
+    checkMediaWidth();
     // do the order for the shopping-basket
     if (totalAmount > 0) {
         // order is OK
@@ -115,6 +132,7 @@ function placeTheOrder() {
 }
 
 function clearErrorMessage() {
+    checkMediaWidth();
     // CLEAR error-order-box AND clear message-box after ORDER
     let errorMessage = document.getElementById("errorOrder");
     errorMessage.innerHTML = "";
@@ -126,9 +144,10 @@ function clearErrorMessage() {
 }
 
 function clearBasket() {
+    checkMediaWidth();
     // clear the shopping basket after the order is made
     for (let index = 0; index < myDishes.length; index++) {
-        myDishes[index].amount = 0;        
+        myDishes[index].amount = 0;
     }
     dishesAdd.innerHTML = "";
     renderAllCosts();
@@ -136,7 +155,8 @@ function clearBasket() {
 
 
 // SEND E-Mail
-function sendMail(event){
+function sendMail(event) {
+    // user wants contact with store per E-Mail    
     event.preventDefault();
     const data = new FormData(event.target);
 
@@ -152,4 +172,14 @@ function sendMail(event){
     }).catch((error) => {
         console.log(error);
     });
+}
+
+function checkMediaWidth() {
+    // checking for nessesary mobile_style.css
+    let mediaWidth = window.innerWidth;
+    if (mediaWidth < 768) {
+        mediaMobile = true;
+    } else {
+        mediaMobile = false;
+    }
 }

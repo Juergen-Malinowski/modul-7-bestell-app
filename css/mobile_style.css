@@ -1,0 +1,7 @@
+/* style for mobile up to 767px */
+@media (max-width: 767px) {
+    .m {
+        margin-left: 5px;
+
+    }
+}

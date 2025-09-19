@@ -148,7 +148,7 @@ function sendMail(event){
         }
     }).then(() => {
         // window.location.replace("./mail_confirmation.html");
-        window.location.href = "./mail_confirmation.html";
+        window.location.href = "./html/mail_confirmation.html";
     }).catch((error) => {
         console.log(error);
     });

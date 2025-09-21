@@ -47,7 +47,7 @@
 
     /* CLASS for all dishes */
     .single_dishes {
-        height: 100px;
+        height: 110px;
         /* margin-right: 5px; */
     }
 
@@ -79,12 +79,6 @@
   BEARBEITEN, wenn Warenkorb auf Button zum Öffnen geändert wurde 
 #################################################################### */
     /* CLASS for shoppingbasket */
-    h2 {
-        display: none;
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
     .basket_meal {
         font-size: 12px;
         background-color: white;
@@ -94,7 +88,7 @@
     }
 
     .button_grafik {
-        display: none;
+        display: block;
         font-size: 20px;
         /* show basket only when User click button shopping-basket */
     }
@@ -102,6 +96,17 @@
     .button_grafik:hover {
         font-size: 24px;
     }
+
+    .button_grafik_hidden {
+        display: none;
+        font-size: 20px;
+        /* show basket only when User click button shopping-basket */
+    }
+
+    .button_grafik_hidden:hover {
+        font-size: 24px;
+    }
+
 
     .price_box_mobile {
         background-color: white;
@@ -130,12 +135,28 @@
     }
 
     .button_open_basket {
-        display: block;
         width: 200px;
         height: 40px;
         font-size: 18px;
         margin-left: 10px;
     }
+
+    .button_close_basket {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+        background-color: yellow;
+        font-weight: bold;
+        border-style: double;
+        border-color: black;
+        border-width: 5px;
+        position: fixed;
+        bottom: 0;
+        left: 200px;
+    }
+
+
+
 
     /* #################################################################
   ENDE, offen zur Bearbeitung !!!!!!!!!!
@@ -188,7 +209,9 @@
     }
 }
 
+
+
 @media (max-width: 440px) {
     /* 1. letztes Gericht in Konflikt mit Button Warenkorb öffnen */
-    
+
 }

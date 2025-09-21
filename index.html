@@ -40,23 +40,24 @@
     <!-- show the shopping-basket here-->
     <section class="shopping_basket" id="section_basket">
       <div class="basket_grafik" id="show_basket">
-        <h2>Ihr Warenkorb ...</h2>
+        <h2 id="headline_h2">Ihr Warenkorb ...</h2>
         <!-- BOX show selected dishes here  -->
         <div class="selection_grafik" id="select_dishes"></div>
         <hr class="line_grafik">
         <div class="price_box" id="go_subtotal"></div>
         <div class="price_box" id="travel_expenses"></div>
         <div class="price_box" id="total_amount"></div>
-        <div class="button_position">
+        <div class="button_position" id="button_position">
           <!-- BUTTON make the order -->
-          <button class="button_grafik" onclick="placeTheOrder()">Bestellung aufgeben</button>
+          <button class="button_grafik" id="order_button" onclick="placeTheOrder()">Bestellung aufgeben</button>
         </div>
         <!-- show ERROR, while no dish is in the shopping-basket by take order -->
         <div id="errorOrder"></div>
       </div>
     </section>
-    <button class="button_open_basket" id="button_open_close" onclick="toggleBasketForMobile()">
+    <button class="button_open_basket" id="button_open_basket" onclick="mobileShowBasket()">
       Warenkorb</button>
+
   </main>
 
   <footer class="footer_grafik">

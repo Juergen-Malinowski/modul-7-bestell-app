@@ -8,6 +8,7 @@ let totalAmount = 0;
 let errorMarker = false;
 let makeOrder = false;
 let mediaMobile = false;
+let showBasket = true;
 let mediaWidth = window.innerWidth;
 // for shopping-basket ...
 let nextDishes = document.getElementById("show_dishes");
@@ -23,7 +24,12 @@ let sectionBasket = document.getElementById("section_basket");
 let travelMobile = document.getElementById("travel_expenses");
 let subtotalMobile = document.getElementById("go_subtotal");
 let totalMobile = document.getElementById("total_amount");
-// let controlButton = document.getElementById("button_open_close");
+let controlButton = document.getElementById("button_open_basket");
+
+let controlButtonClose = document.getElementById("button_position");
+
+let basketH2 = document.getElementById("headline_h2");
+let orderButton = document.getElementById("order_button");
 
 
 function checkMediaWidth() {
@@ -31,26 +37,22 @@ function checkMediaWidth() {
     // let mediaWidth = window.innerWidth;
     if (mediaWidth < 768) {
         mediaMobile = true;
+        showBasket = false;
     } else {
         mediaMobile = false;
+        showBasket = true;
     }
 }
 
 function initOnload() {
     // first load html
     // first check to get Mobile-Style ...
-
-
-    // document.getElementById("button_open_close").style.display === "none";
-    // controlButton.style.display === "none";
-
-
     checkMediaWidth();
-    // eventListener now running all time and check vor Mobile-Style nessesary
+    // eventListener now running all time and check is Mobile-Style nessesary
     window.addEventListener("resize", () => {
         checkMediaWidth();
+        // toggle the CLASS for shopping-basket ...
         makeChangeClassForInit();
-        // toggleBasketForMobile();
     });
     nextDishes.innerHTML = renderImgDishes();
     makeChangeClassForInit();
@@ -74,38 +76,37 @@ function makeChangeClassForInit() {
 
 function setClassMobile() {
     // toggle to Class for mobile ...
-    // remove class ...
-    sectionDishes.classList.remove("dishes");
-    sectionBasket.classList.remove("shopping_basket");
-    travelMobile.classList.remove("price_box");
-    subtotalMobile.classList.remove("price_box");
-    totalMobile.classList.remove("price_box");
-    // add class ...
-    sectionDishes.classList.add("dishes_mobile")
-    sectionBasket.classList.add("shopping_basket_mobile")
-    travelMobile.classList.add("price_box_mobile");
-    subtotalMobile.classList.add("price_box_mobile");
-    totalMobile.classList.add("price_box_mobile");
+    sectionDishes.classList.replace("dishes", "dishes_mobile");
+    sectionBasket.classList.replace("shopping_basket", "shopping_basket_mobile");
+    travelMobile.classList.replace("price_box", "price_box_mobile");
+    subtotalMobile.classList.replace("price_box", "price_box_mobile");
+    totalMobile.classList.replace("price_box", "price_box_mobile");
+    // if (showBasket) {
+    //     basketH2.classList.remove("mobile_noBasket");
+    //     basketH2.classList.add("mobile_showBasket");
+    // }
+    controlButton.classList.remove("hiddenButtonBasket");
+    controlButton.classList.add("showButtonBasket");
+    // controlButton.classList.replace("hiddenButtonBasket", "showButtonBasket");
 }
 
 function setClassPC() {
     // toggle to Class for PC ...
-    // remove class ...
-    sectionDishes.classList.remove("dishes_mobile")
-    sectionBasket.classList.remove("shopping_basket_mobile")
-    travelMobile.classList.remove("price_box_mobile");
-    subtotalMobile.classList.remove("price_box_mobile");
-    totalMobile.classList.remove("price_box_mobile");
-    // add class ...
-    sectionDishes.classList.add("dishes");
-    sectionBasket.classList.add("shopping_basket");
-    travelMobile.classList.add("price_box");
-    subtotalMobile.classList.add("price_box");
-    totalMobile.classList.add("price_box");
+    sectionDishes.classList.replace("dishes_mobile", "dishes");
+    sectionBasket.classList.replace("shopping_basket_mobile", "shopping_basket");
+    travelMobile.classList.replace("price_box_mobile", "price_box");
+    subtotalMobile.classList.replace("price_box_mobile", "price_box");
+    totalMobile.classList.replace("price_box_mobile", "price_box");
+    // if (!showBasket) {
+    //     basketH2.classList.remove("mobile_showBasket");
+    //     basketH2.classList.add("mobile_noBasket");
+    // }
+    controlButton.classList.remove("showButtonBasket");
+    controlButton.classList.add("hiddenButtonBasket");
+    // controlButton.classList.replace("showButtonBasket", "hiddenButtonBasket");
 }
 
 function addDishes(index) {
-    checkMediaWidth();
     // render a new dish in the shopping-basket
     dishesAdd.innerHTML = "";
     myDishes[index].amount = myDishes[index].amount + 1;
@@ -119,7 +120,6 @@ function addDishes(index) {
 }
 
 function renderAllCosts(index) {
-    checkMediaWidth();
     // go to ALL render-functions for COSTS of shopping-basket
     if (errorMarker) {
         // if shopping-basket is emty ... ERROR: frist choise a dish
@@ -150,7 +150,6 @@ function getPriceSubTotal() {
 }
 
 function reduceDishes(index) {
-    checkMediaWidth();
     // render user have reduce a dish
     if (myDishes[index].amount > 0) {
         myDishes[index].amount = myDishes[index].amount - 1;
@@ -166,7 +165,6 @@ function reduceDishes(index) {
 
 
 function clearDishes(index) {
-    checkMediaWidth();
     // clear the sopping-basket after order
     myDishes[index].amount = 0;
     dishesAdd.innerHTML = "";
@@ -190,7 +188,6 @@ function showEuroValue(value_number) {
 }
 
 function placeTheOrder() {
-    checkMediaWidth();
     // do the order for the shopping-basket
     if (totalAmount > 0) {
         // order is OK
@@ -208,7 +205,6 @@ function placeTheOrder() {
 }
 
 function clearErrorMessage() {
-    checkMediaWidth();
     // CLEAR error-order-box AND clear message-box after ORDER
     let errorMessage = document.getElementById("errorOrder");
     errorMessage.innerHTML = "";
@@ -220,7 +216,6 @@ function clearErrorMessage() {
 }
 
 function clearBasket() {
-    checkMediaWidth();
     // clear the shopping basket after the order is made
     for (let index = 0; index < myDishes.length; index++) {
         myDishes[index].amount = 0;
@@ -251,27 +246,14 @@ function sendMail(event) {
 }
 
 
-// function toggleBasketForMobile() {
-//     // mobile_style.css < 441px ... toggle Basket to hide / to show
+function mobileShowBasket() {
 
-//     let controlButton = document.getElementById("button_open_close");
-//     switch (mediaWidth) {
-//         case mediaWidth < 441:
-//             // don´t show button "open/close"
-//             controlButton.style.display === "block";
-//             // switch the shopping-basket
-//             if (sectionBasket.style.display === "none") {
-//                 sectionBasket.style.display = "block";
-//             } else {
-//                 sectionBasket.style.display = "none";
-//             }
-//             break;
-//         case mediaWidth >= 441:
-//             // don´t show button "open/close"
-//             controlButton.style.display === "none";
-
-//             break;
-
-//     }
-// }
-
+    // controlButton.classList.remove("showButtonBasket");
+    // controlButton.classList.add("hiddenButtonBasket");
+    sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");
+    basketH2.classList.remove("mobile_noBasket");
+    basketH2.classList.add("mobile_showBasket");
+    let closeBasket = document.getElementById("errorOrder");
+    closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
+        onclick="mobileCloseBasket()">Warenkorb schließen</button>`
+}

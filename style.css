@@ -14,7 +14,7 @@ h1 {
 h2 {
     font-size: 30px;
     text-align: center;
-    background-color: white;
+    background-color: lightgray;
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 30px;
 }
@@ -248,24 +248,6 @@ h3 {
     overflow-x: hidden;
 }
 
-.shopping_basket {
-    width: 300px;
-    flex-grow: 1;
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    margin: 10px 3px 0 20px;
-}
-
-.shopping_basket_mobile {
-    /* changes the basic HTML structure 
-    for MOBILE up to 767px FOR shopping-basket */
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100vh;
-    overflow-x: hidden;
-}
-
 .icon_position {
     display: flex;
     flex-direction: column;
@@ -360,12 +342,48 @@ h3 {
 
 
 /* CLASS for shoppingbasket */
+
+.shopping_basket {
+    width: 300px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    margin: 10px 3px 0 20px;
+}
+
+.shopping_basket_mobile {
+    /* changes the basic HTML structure 
+    for MOBILE up to 767px FOR shopping-basket */
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100vh;
+    overflow-x: hidden;
+}
+
+.show_shopping_basket_mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100vh;
+    overflow-x: hidden;
+}
+
 .basket_grafik {
     position: sticky;
     top: 0;
     border-radius: 20px 20px 20px 20px;
     background-color: white;
 }
+
+.mobile_showBasket {
+    display: block;
+}
+
+.mobile_noBasket {
+    display: none;
+}
+
 
 .selection_grafik {
     background-color: white;
@@ -517,4 +535,12 @@ h3 {
     border-width: 5px;
     position: fixed;
     bottom: 0;
+}
+
+.showButtonBasket {
+    display: block;
+}
+
+.hiddenButtonBasket {
+    display: none;
 }

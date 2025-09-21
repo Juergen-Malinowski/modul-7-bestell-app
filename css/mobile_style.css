@@ -80,6 +80,7 @@
 #################################################################### */
     /* CLASS for shoppingbasket */
     h2 {
+        display: none;
         font-size: 24px;
         margin-bottom: 15px;
     }
@@ -93,7 +94,9 @@
     }
 
     .button_grafik {
+        display: none;
         font-size: 20px;
+        /* show basket only when User click button shopping-basket */
     }
 
     .button_grafik:hover {
@@ -126,9 +129,32 @@
         margin: 8px;
     }
 
+    .button_open_basket {
+        display: block;
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
     /* #################################################################
   ENDE, offen zur Bearbeitung !!!!!!!!!!
 #################################################################### */
+
+    /* CLASS for footer */
+    .icon_thanks {
+        display: none;
+    }
+
+    .privacy_policy {
+        display: none;
+    }
+
+    .copyright_jm {
+        font-size: 14px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
 
 
     /* CLASS for impressum */
@@ -162,4 +188,7 @@
     }
 }
 
-@media (max-width: 440px) {}
+@media (max-width: 440px) {
+    /* 1. letztes Gericht in Konflikt mit Button Warenkorb öffnen */
+    
+}

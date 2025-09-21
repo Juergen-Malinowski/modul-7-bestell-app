@@ -259,6 +259,7 @@ h3 {
 .shopping_basket_mobile {
     /* changes the basic HTML structure 
     for MOBILE up to 767px FOR shopping-basket */
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100vh;
@@ -505,6 +506,7 @@ h3 {
 }
 
 .button_open_basket {
+    display: none;
     width: 310px;
     height: 100px;
     font-size: 25px;

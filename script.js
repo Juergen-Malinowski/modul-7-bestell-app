@@ -66,16 +66,15 @@ function makeChangeClassForInit() {
     // depending on Boolean from "mediaMobile" use 
     // the mobile-Class OR switch back
     if (mediaMobile) {
-        // remove class ...
         setClassMobile();
     } else {
-        // remove class ...
         setClassPC();
     }
 }
 
 function setClassMobile() {
     // toggle to Class for mobile ...
+    // remove class ...
     sectionDishes.classList.remove("dishes");
     sectionBasket.classList.remove("shopping_basket");
     travelMobile.classList.remove("price_box");
@@ -91,6 +90,7 @@ function setClassMobile() {
 
 function setClassPC() {
     // toggle to Class for PC ...
+    // remove class ...
     sectionDishes.classList.remove("dishes_mobile")
     sectionBasket.classList.remove("shopping_basket_mobile")
     travelMobile.classList.remove("price_box_mobile");

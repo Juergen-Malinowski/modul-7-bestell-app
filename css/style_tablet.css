@@ -48,6 +48,7 @@
     /* CLASS for all dishes */
     .single_dishes {
         height: 150px;
+        margin-left: 10px;
     }
 
     .single_dishes_meal {

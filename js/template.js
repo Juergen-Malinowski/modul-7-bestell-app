@@ -54,15 +54,15 @@ function renderAddDishes(index) {
 function renderSubtotal() {
     // render prise of shopping-basket from dishes WITHOUT travel-expenses
     return `
-        <span class="basket_subtotal">Warenkorb:</span>
-        <span class="basket_subtotal">${showEuroValue(subTotal)}</span>
+        <span class="basket_subtotal">Warenkorb: </span>
+        <span class="basket_subtotal"> ${showEuroValue(subTotal)}</span>
     `
 }
 
 function renderTravelExpenses() {
     // render costs for travel-expenses
     return `
-        <span class="basket_subtotal">Fahrtkosten:</span>
+        <span class="basket_subtotal">Fahrtkosten: </span>
         <span class="basket_subtotal">5,00 €</span>
     `
 }
@@ -71,7 +71,7 @@ function renderTravelExpenses() {
 function renderTotalAmount() {
     // render the total-amount of shopping-basket
     return `
-        <span class="basket_total">Gesamtpreis:</span>
+        <span class="basket_total">Gesamtpreis: </span>
         <span class="basket_total">${showEuroValue(totalAmount)}</span>    
     `
 }

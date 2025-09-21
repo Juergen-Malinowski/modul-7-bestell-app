@@ -20,7 +20,10 @@ addTotalAmount.innerHTML = "";
 // for CONTROL dishes AND shopping-basket ...
 let sectionDishes = document.getElementById("section_dishes");
 let sectionBasket = document.getElementById("section_basket");
-let controlButton = document.getElementById("button_open_close");
+let travelMobile = document.getElementById("travel_expenses");
+let subtotalMobile = document.getElementById("go_subtotal");
+let totalMobile = document.getElementById("total_amount");
+// let controlButton = document.getElementById("button_open_close");
 
 
 function checkMediaWidth() {
@@ -47,7 +50,7 @@ function initOnload() {
     window.addEventListener("resize", () => {
         checkMediaWidth();
         makeChangeClassForInit();
-        toggleBasketForMobile();
+        // toggleBasketForMobile();
     });
     nextDishes.innerHTML = renderImgDishes();
     makeChangeClassForInit();
@@ -63,18 +66,43 @@ function makeChangeClassForInit() {
     // depending on Boolean from "mediaMobile" use 
     // the mobile-Class OR switch back
     if (mediaMobile) {
-        sectionDishes.classList.remove("dishes");
-        sectionDishes.classList.add("dishes_mobile")
-        sectionBasket.classList.remove("shopping_basket");
-        sectionBasket.classList.add("shopping_basket_mobile")
+        // remove class ...
+        setClassMobile();
     } else {
-        sectionDishes.classList.remove("dishes_mobile")
-        sectionDishes.classList.add("dishes");
-        sectionBasket.classList.remove("shopping_basket_mobile")
-        sectionBasket.classList.add("shopping_basket");
+        // remove class ...
+        setClassPC();
     }
 }
 
+function setClassMobile() {
+    // toggle to Class for mobile ...
+    sectionDishes.classList.remove("dishes");
+    sectionBasket.classList.remove("shopping_basket");
+    travelMobile.classList.remove("price_box");
+    subtotalMobile.classList.remove("price_box");
+    totalMobile.classList.remove("price_box");
+    // add class ...
+    sectionDishes.classList.add("dishes_mobile")
+    sectionBasket.classList.add("shopping_basket_mobile")
+    travelMobile.classList.add("price_box_mobile");
+    subtotalMobile.classList.add("price_box_mobile");
+    totalMobile.classList.add("price_box_mobile");
+}
+
+function setClassPC() {
+    // toggle to Class for PC ...
+    sectionDishes.classList.remove("dishes_mobile")
+    sectionBasket.classList.remove("shopping_basket_mobile")
+    travelMobile.classList.remove("price_box_mobile");
+    subtotalMobile.classList.remove("price_box_mobile");
+    totalMobile.classList.remove("price_box_mobile");
+    // add class ...
+    sectionDishes.classList.add("dishes");
+    sectionBasket.classList.add("shopping_basket");
+    travelMobile.classList.add("price_box");
+    subtotalMobile.classList.add("price_box");
+    totalMobile.classList.add("price_box");
+}
 
 function addDishes(index) {
     checkMediaWidth();

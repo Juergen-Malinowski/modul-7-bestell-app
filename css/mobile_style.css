@@ -169,7 +169,8 @@
     .box_for_ErrorOrder {
         width: 300px;
         height: 100px;
-        margin-left: 65px;
+        margin-left: 40px;
+        margin-bottom: 40px;
         background-color: lightgray;
         justify-content: flex-start;
     }

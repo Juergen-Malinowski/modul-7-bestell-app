@@ -104,6 +104,11 @@ function addDishes(index) {
     };
     // render all costs-items of shopping-basket
     renderAllCosts();
+    if (mediaMobile) {
+        // if MOBILE then show Button CLOSE shopping-basket
+        closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
+            onclick="mobileCloseBasket()">Warenkorb schließen</button>`
+    }
 }
 
 function renderAllCosts(index) {
@@ -187,6 +192,8 @@ function placeTheOrder() {
         let errorMessage = document.getElementById("errorOrder");
         errorMessage.innerHTML = "";
         errorMessage.innerHTML = renderOrderError();
+        closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
+        onclick="mobileCloseBasket()">Warenkorb schließen</button>`
     }
 }
 

@@ -38,7 +38,7 @@ function renderAddDishes(index) {
                 <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
                     onclick="addDishes(${index})" alt="plus-button">
                 <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
-                <img class="icon_grafik" src="./assets/Logo/minus_button.png" 
+                <img class="icon_grafik_minus" src="./assets/Logo/minus_button.png" 
                     onclick="reduceDishes(${index})" alt="minus-button"> 
             </div>             
         

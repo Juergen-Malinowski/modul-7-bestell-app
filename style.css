@@ -423,7 +423,7 @@ h3 {
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .icons_disply_row {
@@ -442,6 +442,13 @@ h3 {
 }
 
 .icon_grafik {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-left: 5px;
+}
+
+.icon_grafik_minus {
     width: 20px;
     height: 20px;
     background-color: white;

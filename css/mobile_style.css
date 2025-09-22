@@ -7,6 +7,15 @@
         margin-left: 50px;
     }
 
+    h2 {
+        font-size: 26px;
+        text-align: start;
+        border-radius: 0;
+        margin-right: 4px;
+        margin-left: 2px;
+        padding-left: 15px;
+    }
+
     .bestell_logo {
         width: 100px;
     }
@@ -48,7 +57,8 @@
     /* CLASS for all dishes */
     .single_dishes {
         height: 110px;
-        /* margin-right: 5px; */
+        border-radius: 0;
+        margin-left: 2px;
     }
 
     .single_dishes_meal {
@@ -79,6 +89,16 @@
   BEARBEITEN, wenn Warenkorb auf Button zum Öffnen geändert wurde 
 #################################################################### */
     /* CLASS for shoppingbasket */
+    .basket_grafik {
+        border-radius: 0;
+        margin-left: 3px;
+        background-color: lightgray;
+    }
+
+    .show_shopping_basket_mobile {
+        background-color: lightgray;
+    }
+
     .basket_meal {
         font-size: 12px;
         background-color: white;
@@ -109,7 +129,7 @@
 
 
     .price_box_mobile {
-        background-color: white;
+        background-color: lightgray;
         display: flex;
         margin: 5px;
     }
@@ -132,6 +152,20 @@
     .order_box_error {
         font-size: 16px;
         margin: 8px;
+    }
+
+    .basket_subtotal {
+        margin-right: 25px;
+        background-color: lightgray;
+    }
+
+    .basket_total {
+        margin-right: 10px;
+        background-color: lightgray;
+    }
+
+    .button_position {
+        background-color: lightgray;
     }
 
     .button_open_basket {
@@ -159,6 +193,9 @@
         display: none;
     }
 
+    .icon_grafik_minus {
+        margin-right: 30px;
+    }
 
 
     /* #################################################################

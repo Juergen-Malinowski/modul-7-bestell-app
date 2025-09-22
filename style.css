@@ -14,7 +14,7 @@ h1 {
 h2 {
     font-size: 30px;
     text-align: center;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 30px;
 }
@@ -131,6 +131,10 @@ h3 {
     color: yellow;
 }
 
+.copyright_jm_impressum {
+    font-size: 24px;
+    color: yellow;
+}
 
 /* CLASS for impressum */
 .box_position_im {

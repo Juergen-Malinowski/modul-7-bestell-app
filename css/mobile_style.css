@@ -9,6 +9,7 @@
 
     h2 {
         font-size: 26px;
+        background-color: lightgray;
         text-align: start;
         border-radius: 0;
         margin-right: 4px;
@@ -247,6 +248,10 @@
         display: none;
     }
 
+    .copyright_jm_impressum {
+        font-size: 20px;
+        color: yellow;
+    }
 
     /* CLASS for impressum */
     h3 {
@@ -279,12 +284,15 @@
     }
 }
 
-
-
-
-
+/* ############################## */
+/* MEDIA < 441 PX */
+/* ############################## */
 
 @media (max-width: 440px) {
+    .copyright_jm_impressum {
+        font-size: 19px;
+        color: yellow;
+    }
 
     /* CLASS for header */
     h1 {
@@ -362,10 +370,6 @@
         font-size: 16px;
     }
 
-
-
-
-
     /* CLASS for shoppingbasket */
     .button_position {
         justify-content: flex-start;
@@ -410,7 +414,7 @@
         font-size: 16px;
     }
 
-    
+
     .box_for_ErrorOrder {
         width: 280px;
         height: 65px;
@@ -423,6 +427,25 @@
         margin: 5px;
     }
 
+    /* CLASS for contact-mail */
+    .input_position {
+        width: 310px;
+        height: 350px;
+    }
+
+    .headline_grafik_mail {
+        width: 300px;
+        font-size: 26px;
+    }
+
+    .label_grafik {
+        font-size: 18px;
+    }
+
+    .input_grafik {
+        width: 290px;
+        font-size: 16px;
+    }
 
 
 
@@ -430,4 +453,4 @@
 
 
 
-
+}

@@ -281,6 +281,9 @@
 
 
 
+
+
+
 @media (max-width: 440px) {
 
     /* CLASS for header */
@@ -334,8 +337,6 @@
         top: 118px;
     }
 
-
-
     /* CLASS for all dishes */
     .single_dishes {
         height: 110px;
@@ -360,6 +361,8 @@
     .single_dishes_price {
         font-size: 16px;
     }
+
+
 
 
 
@@ -407,54 +410,20 @@
         font-size: 16px;
     }
 
-    .button_grafik_hidden {
-        display: none;
-        font-size: 20px;
+    
+    .box_for_ErrorOrder {
+        width: 280px;
+        height: 65px;
+        margin-left: 10px;
+        margin-bottom: 45px;
     }
 
-    .button_grafik_hidden:hover {
-        font-size: 24px;
-    }
-
-
-    /* .basket_grafik {
-        border-radius: 0;
-        margin-left: 3px;
-    } */
-
-
-    /* .basket_meal {
-        font-size: 12px;
-        margin-left: 5px;
-        margin-top: 8px;
-        margin-bottom: 5px;
-    } */
-
-
-    .price_box_mobile {
+    .order_box_error {
+        font-size: 14px;
         margin: 5px;
     }
 
 
-    .box_for_ErrorOrder {
-        width: 300px;
-        height: 100px;
-        margin-left: 65px;
-    }
-
-    .order_box_error {
-        font-size: 16px;
-        margin: 8px;
-        border-radius: 0;
-    }
-
-    .basket_subtotal {
-        margin-right: 25px;
-    }
-
-    .basket_total {
-        margin-right: 10px;
-    }
 
 
 
@@ -462,5 +431,3 @@
 
 
 
-
-}

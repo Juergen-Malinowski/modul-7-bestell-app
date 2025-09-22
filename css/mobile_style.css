@@ -142,6 +142,7 @@
     }
 
     .button_close_basket {
+        display: block;
         width: 200px;
         height: 40px;
         font-size: 12px;
@@ -155,6 +156,9 @@
         left: 200px;
     }
 
+    .hiddenCloseBaset {
+        display: none;
+    }
 
 
 

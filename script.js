@@ -25,9 +25,7 @@ let travelMobile = document.getElementById("travel_expenses");
 let subtotalMobile = document.getElementById("go_subtotal");
 let totalMobile = document.getElementById("total_amount");
 let controlButton = document.getElementById("button_open_basket");
-
-let controlButtonClose = document.getElementById("button_position");
-
+let closeBasket = document.getElementById("errorOrder");
 let basketH2 = document.getElementById("headline_h2");
 let orderButton = document.getElementById("order_button");
 
@@ -81,13 +79,8 @@ function setClassMobile() {
     travelMobile.classList.replace("price_box", "price_box_mobile");
     subtotalMobile.classList.replace("price_box", "price_box_mobile");
     totalMobile.classList.replace("price_box", "price_box_mobile");
-    // if (showBasket) {
-    //     basketH2.classList.remove("mobile_noBasket");
-    //     basketH2.classList.add("mobile_showBasket");
-    // }
     controlButton.classList.remove("hiddenButtonBasket");
     controlButton.classList.add("showButtonBasket");
-    // controlButton.classList.replace("hiddenButtonBasket", "showButtonBasket");
 }
 
 function setClassPC() {
@@ -97,13 +90,8 @@ function setClassPC() {
     travelMobile.classList.replace("price_box_mobile", "price_box");
     subtotalMobile.classList.replace("price_box_mobile", "price_box");
     totalMobile.classList.replace("price_box_mobile", "price_box");
-    // if (!showBasket) {
-    //     basketH2.classList.remove("mobile_showBasket");
-    //     basketH2.classList.add("mobile_noBasket");
-    // }
     controlButton.classList.remove("showButtonBasket");
     controlButton.classList.add("hiddenButtonBasket");
-    // controlButton.classList.replace("showButtonBasket", "hiddenButtonBasket");
 }
 
 function addDishes(index) {
@@ -163,7 +151,6 @@ function reduceDishes(index) {
     renderAllCosts();
 }
 
-
 function clearDishes(index) {
     // clear the sopping-basket after order
     myDishes[index].amount = 0;
@@ -212,6 +199,14 @@ function clearErrorMessage() {
     if (makeOrder) {
         clearBasket();
         makeOrder = false;
+        if (mediaMobile) {
+            // when MOBILE ... close shopping-basket and show the Button-OPEN-Basket
+            controlButton.classList.remove("hiddenButtonBasket");
+            controlButton.classList.add("showButtonBasket");
+            basketH2.classList.remove("mobile_showBasket");
+            basketH2.classList.add("mobile_noBasket");
+            sectionBasket.classList.replace("show_shopping_basket_mobile", "shopping_basket_mobile");
+        }
     }
 }
 
@@ -247,13 +242,22 @@ function sendMail(event) {
 
 
 function mobileShowBasket() {
-
-    // controlButton.classList.remove("showButtonBasket");
-    // controlButton.classList.add("hiddenButtonBasket");
+    // onclick BUTTON SHOW shopping-basket ...
     sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");
     basketH2.classList.remove("mobile_noBasket");
     basketH2.classList.add("mobile_showBasket");
-    let closeBasket = document.getElementById("errorOrder");
+
     closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
         onclick="mobileCloseBasket()">Warenkorb schließen</button>`
+    controlButton.classList.remove("showButtonBasket");
+    controlButton.classList.add("hiddenButtonBasket");
+}
+
+function mobileCloseBasket() {
+    // onclick BUTTON CLOSE shopping-basket ...
+    controlButton.classList.remove("hiddenButtonBasket");
+    controlButton.classList.add("showButtonBasket");
+    basketH2.classList.remove("mobile_showBasket");
+    basketH2.classList.add("mobile_noBasket");
+    sectionBasket.classList.replace("show_shopping_basket_mobile", "shopping_basket_mobile");
 }

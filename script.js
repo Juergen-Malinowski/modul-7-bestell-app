@@ -27,7 +27,6 @@ let totalMobile = document.getElementById("total_amount");
 let controlButton = document.getElementById("button_open_basket");
 let closeBasket = document.getElementById("errorOrder");
 let basketH2 = document.getElementById("headline_h2");
-let orderButton = document.getElementById("order_button");
 
 
 function checkMediaWidth() {
@@ -246,7 +245,6 @@ function mobileShowBasket() {
     sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");
     basketH2.classList.remove("mobile_noBasket");
     basketH2.classList.add("mobile_showBasket");
-
     closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
         onclick="mobileCloseBasket()">Warenkorb schließen</button>`
     controlButton.classList.remove("showButtonBasket");

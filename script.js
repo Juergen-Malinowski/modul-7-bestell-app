@@ -31,8 +31,7 @@ let basketH2 = document.getElementById("headline_h2");
 
 function checkMediaWidth() {
     // checking for nessesary mobile_style.css
-    // let mediaWidth = window.innerWidth;
-    if (mediaWidth < 768) {
+    if (window.innerWidth < 768) {
         mediaMobile = true;
         showBasket = false;
     } else {

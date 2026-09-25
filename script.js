@@ -3,6 +3,7 @@
 // Application state and DOM references.
 let dishesAdd = document.getElementById("select_dishes");
 dishesAdd.innerHTML = "";
+const DELIVERY_COST = 5;
 let subTotal = 0;
 let totalAmount = 0;
 let errorMarker = false;
@@ -108,7 +109,7 @@ function renderAllCosts(index) {
     }
     getPriceSubTotal();
     addSubtotal.innerHTML = renderSubtotal(index);
-    addTravelExpenses.innerHTML = renderTravelExpenses();
+    addTravelExpenses.innerHTML = renderTravelExpenses(subTotal > 0 ? DELIVERY_COST : 0);
     addTotalAmount.innerHTML = renderTotalAmount();
 }
 
@@ -122,7 +123,7 @@ function getPriceSubTotal() {
         }
     }
     if (subTotal > 0) {
-        totalAmount = subTotal + 5.00;
+        totalAmount = subTotal + DELIVERY_COST;
     }
 }
 

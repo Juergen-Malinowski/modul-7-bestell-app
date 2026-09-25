@@ -59,11 +59,11 @@ function renderSubtotal() {
     `
 }
 
-function renderTravelExpenses() {
-    // Renders the fixed delivery cost.
+function renderTravelExpenses(deliveryCost) {
+    // Renders the current delivery cost.
     return `
         <span class="basket_subtotal">Fahrtkosten: </span>
-        <span class="basket_subtotal">5,00 €</span>
+        <span class="basket_subtotal">${showEuroValue(deliveryCost)}</span>
     `
 }
 

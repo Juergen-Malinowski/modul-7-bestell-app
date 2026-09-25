@@ -1,5 +1,6 @@
+/* Tablet layout up to 1100px. */
 @media (max-width: 1100px) {
-    /* CLASS for header */
+    /* Header and navigation */
     h1 {
         font-size: 3em;
         margin-left: 160px;
@@ -45,7 +46,7 @@
         top: 195px;
     }
 
-    /* CLASS for all dishes */
+    /* Dish list */
     .single_dishes {
         height: 150px;
         margin-left: 10px;
@@ -75,7 +76,7 @@
         height: 55px;
     }
 
-    /* CLASS for shoppingbasket */
+    /* Shopping basket */
     h2 {
         font-size: 24px;
         margin-bottom: 15px;
@@ -117,12 +118,12 @@
         margin: 8px;
     }
 
-    /* CLASS for footer */
+    /* Footer */
     .copyright_jm {
         font-size: 18px;
     }
 
-    /* CLASS for impressum */
+    /* Legal notice */
     h3 {
         font-size: 24px;
         margin-top: 16px;
@@ -139,7 +140,7 @@
         font-size: 16px;
     }
 
-    /* CLASS for contact-mail */
+    /* Contact form */
     .input_position {
         width: 640px;
         height: 300px;
@@ -155,7 +156,7 @@
 
 
 @media (max-width: 872px) {
-    /* CLASS for all dishes */
+    /* Dish list */
     .single_dishes_meal {
         font-size: 20px;
         margin-bottom: 10px;
@@ -180,7 +181,7 @@
         height: 45px;
     }
 
-    /* CLASS for footer */
+    /* Footer */
     .footer_grafik {
         display: flex;
         gap: 25px;

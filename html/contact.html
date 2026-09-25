@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <!-- SEND MAIL ... needs function sendMail() and mail_confirmation.html -->
+        <!-- Submits the form through sendMail() after native HTML validation succeeds. -->
         <form onsubmit="if(this.checkValidity()) 
             { sendMail(event); } else { return false; }">
             <div class="contact_grafik_mail">

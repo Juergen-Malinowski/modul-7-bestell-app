@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="./css/standard.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./css/fonts.css">
-  <!-- <link rel="stylesheet" href="style_widescreen.css"> -->
   <link rel="stylesheet" href="./css/style_tablet.css">
   <link rel="stylesheet" href="./css/mobile_style.css">
 
@@ -32,26 +31,26 @@
   </header>
 
   <main class="my_restaurant">
-    <!-- show the dishes from the restaurant-card here-->
+    <!-- Renders the restaurant menu content dynamically. -->
     <section class="dishes" id="section_dishes">
       <div id="show_dishes"></div>
     </section>
 
-    <!-- show the shopping-basket here-->
+    <!-- Displays the shopping basket and calculated prices. -->
     <section class="shopping_basket" id="section_basket">
       <div class="basket_grafik" id="show_basket">
         <h2 id="headline_h2">Ihr Warenkorb ...</h2>
-        <!-- BOX show selected dishes here  -->
+        <!-- Displays the selected dishes. -->
         <div class="selection_grafik" id="select_dishes"></div>
         <hr class="line_grafik">
         <div class="price_box" id="go_subtotal"></div>
         <div class="price_box" id="travel_expenses"></div>
         <div class="price_box" id="total_amount"></div>
         <div class="button_position" id="button_position">
-          <!-- BUTTON make the order -->
+          <!-- Submits the current basket as a test order. -->
           <button class="button_grafik" id="order_button" onclick="placeTheOrder()">Bestellung aufgeben</button>
         </div>
-        <!-- show ERROR, while no dish is in the shopping-basket by take order -->
+        <!-- Displays order confirmation or empty-basket feedback. -->
         <div class="boxError" id="errorOrder"></div>
       </div>
     </section>
@@ -61,13 +60,13 @@
   </main>
 
   <footer class="footer_grafik">
-    <!-- reference to source of supply for ICONS -->
+    <!-- IconScout credit for basket control icons. -->
     <a href="https://iconscout.com/icons/plus" class="icon_thanks" target="_blank">ICONS by Zainal
       Abidin</a>
-    <!-- Link to the icon-publisher "WOK" for free download -->
+    <!-- Icons8 credit for the wok icon. -->
     <a class="icon_thanks" href="https://icons8.com/" target="_blank" title="icons8">WOK-ICON von
       icons8.com</a>
-    <!-- Link to creater of privacy policy -->
+    <!-- Links to the current privacy policy. -->
     <a href="./assets/datenschutzerklaerung_github_com_de.pdf" class="privacy_policy">Datenschutzerklärung</a>
     <p class="copyright_jm">(C) Jürgen Malinowski, 17.09.2025</p>
   </footer>

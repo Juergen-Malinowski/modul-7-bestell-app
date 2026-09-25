@@ -1,7 +1,7 @@
-/* style for mobile up to 767px */
+/* Mobile layout up to 767px. */
 @media (max-width: 767px) {
 
-    /* CLASS for header */
+    /* Header and navigation */
     h1 {
         font-size: 2em;
         margin-left: 50px;
@@ -57,7 +57,7 @@
     }
 
 
-    /* CLASS for all dishes */
+    /* Dish list */
     .single_dishes {
         height: 110px;
         border-radius: 0;
@@ -89,7 +89,7 @@
     }
 
 
-    /* CLASS for shoppingbasket */
+    /* Shopping basket */
     .basket_grafik {
         border-radius: 0;
         margin-left: 3px;
@@ -235,7 +235,7 @@
     }
 
 
-    /* CLASS for footer */
+    /* Footer */
     .icon_thanks {
         display: none;
     }
@@ -253,7 +253,7 @@
         color: yellow;
     }
 
-    /* CLASS for impressum */
+    /* Legal notice */
     h3 {
         font-size: 2em;
         margin-top: 10px;
@@ -264,7 +264,7 @@
         height: 480px;
     }
 
-    /* CLASS for contact-mail */
+    /* Contact form */
     .input_position {
         width: 430px;
         height: 400px;
@@ -284,17 +284,14 @@
     }
 }
 
-/* ############################## */
-/* MEDIA < 441 PX */
-/* ############################## */
-
+/* Small-screen adjustments up to 440px. */
 @media (max-width: 440px) {
     .copyright_jm_impressum {
         font-size: 19px;
         color: yellow;
     }
 
-    /* CLASS for header */
+    /* Header and navigation */
     h1 {
         font-size: 22px;
         margin-left: 20px;
@@ -345,7 +342,7 @@
         top: 118px;
     }
 
-    /* CLASS for all dishes */
+    /* Dish list */
     .single_dishes {
         height: 110px;
         border-radius: 0;
@@ -370,7 +367,7 @@
         font-size: 16px;
     }
 
-    /* CLASS for shoppingbasket */
+    /* Shopping basket */
     .button_position {
         justify-content: flex-start;
         padding-left: 0;
@@ -427,7 +424,7 @@
         margin: 5px;
     }
 
-    /* CLASS for contact-mail */
+    /* Contact form */
     .input_position {
         width: 310px;
         height: 350px;

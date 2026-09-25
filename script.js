@@ -27,7 +27,7 @@ let travelMobile = document.getElementById("travel_expenses");
 let subtotalMobile = document.getElementById("go_subtotal");
 let totalMobile = document.getElementById("total_amount");
 let controlButton = document.getElementById("button_open_basket");
-let closeBasket = document.getElementById("errorOrder");
+let closeBasketButton = document.getElementById("button_close_basket");
 let basketH2 = document.getElementById("headline_h2");
 
 
@@ -98,11 +98,6 @@ function addDishes(index) {
         }
     };
     renderAllCosts();
-    if (mediaMobile) {
-        // Adds the close control while the mobile basket is active.
-        closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
-            onclick="mobileCloseBasket()">Warenkorb schließen</button>`
-    }
 }
 
 function renderAllCosts(index) {
@@ -179,8 +174,6 @@ function placeTheOrder() {
         let errorMessage = document.getElementById("errorOrder");
         errorMessage.innerHTML = "";
         errorMessage.innerHTML = renderOrderError();
-        closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
-        onclick="mobileCloseBasket()">Warenkorb schließen</button>`
     }
 }
 
@@ -192,12 +185,7 @@ function clearErrorMessage() {
         clearBasket();
         makeOrder = false;
         if (mediaMobile) {
-            // Closes the mobile basket and restores its open button.
-            controlButton.classList.remove("hiddenButtonBasket");
-            controlButton.classList.add("showButtonBasket");
-            basketH2.classList.remove("mobile_showBasket");
-            basketH2.classList.add("mobile_noBasket");
-            sectionBasket.classList.replace("show_shopping_basket_mobile", "shopping_basket_mobile");
+            mobileCloseBasket();
         }
     }
 }
@@ -217,14 +205,14 @@ function mobileShowBasket() {
     sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");
     basketH2.classList.remove("mobile_noBasket");
     basketH2.classList.add("mobile_showBasket");
-    closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
-        onclick="mobileCloseBasket()">Warenkorb schließen</button>`
+    closeBasketButton.hidden = false;
     controlButton.classList.remove("showButtonBasket");
     controlButton.classList.add("hiddenButtonBasket");
 }
 
 function mobileCloseBasket() {
     // Closes the mobile basket and restores the open-basket button.
+    closeBasketButton.hidden = true;
     controlButton.classList.remove("hiddenButtonBasket");
     controlButton.classList.add("showButtonBasket");
     basketH2.classList.remove("mobile_showBasket");

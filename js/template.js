@@ -1,7 +1,7 @@
-// JS HTML-Templates
+// HTML template functions for menu, basket, pricing, and order feedback.
 
 function renderImgDishes() {
-    // render big-img and shop-logo from the APP
+    // Renders the restaurant hero image and logo.
     return `
         <div class="icon_position">
             <img class="img_grafik" src="./assets/img/wok.jpg" alt="WOK-Bild">
@@ -14,7 +14,7 @@ function renderImgDishes() {
 
 
 function renderDishes(index) {
-    // render the card with all dishes 
+    // Renders a menu card for the selected dish.
     return `
         <div class="single_dishes">
             <div class="dishes_and_button">
@@ -30,7 +30,7 @@ function renderDishes(index) {
 
 
 function renderAddDishes(index) {
-    // render a new dish in the shopping-basket
+    // Renders a selected dish with quantity controls inside the basket.
     return `
         <p class="basket_meal">${myDishes[index].meal}</p>
         <div class="icons_position"> 
@@ -52,7 +52,7 @@ function renderAddDishes(index) {
 }
 
 function renderSubtotal() {
-    // render prise of shopping-basket from dishes WITHOUT travel-expenses
+    // Renders the basket subtotal before delivery costs.
     return `
         <span class="basket_subtotal">Warenkorb: </span>
         <span class="basket_subtotal"> ${showEuroValue(subTotal)}</span>
@@ -60,7 +60,7 @@ function renderSubtotal() {
 }
 
 function renderTravelExpenses() {
-    // render costs for travel-expenses
+    // Renders the fixed delivery cost.
     return `
         <span class="basket_subtotal">Fahrtkosten: </span>
         <span class="basket_subtotal">5,00 €</span>
@@ -69,7 +69,7 @@ function renderTravelExpenses() {
 
 
 function renderTotalAmount() {
-    // render the total-amount of shopping-basket
+    // Renders the basket total including delivery costs.
     return `
         <span class="basket_total">Gesamtpreis: </span>
         <span class="basket_total">${showEuroValue(totalAmount)}</span>    
@@ -78,7 +78,7 @@ function renderTotalAmount() {
 
 
 function renderOrder() {
-    // render the user have made a order
+    // Renders the confirmation message for a completed test order.
     return `
         <div class="box_for_order">
             <button class="order_box" onclick="clearErrorMessage()">
@@ -89,7 +89,7 @@ function renderOrder() {
 }
 
 function renderOrderError() {
-    // render the user have made a order WITHOUT choise a dish
+    // Renders an error message when an order is attempted with an empty basket.
     return `
         <div class="box_for_ErrorOrder">
             <button class="order_box_error">

@@ -1,6 +1,6 @@
-// Basis JS-Datei
+// Main application logic for menu rendering, basket management, responsive behavior, and contact form submission.
 
-// DEFINITION Variables
+// Application state and DOM references.
 let dishesAdd = document.getElementById("select_dishes");
 dishesAdd.innerHTML = "";
 let subTotal = 0;
@@ -10,7 +10,8 @@ let makeOrder = false;
 let mediaMobile = false;
 let showBasket = true;
 let mediaWidth = window.innerWidth;
-// for shopping-basket ...
+
+// Basket pricing elements.
 let nextDishes = document.getElementById("show_dishes");
 let addSubtotal = document.getElementById("travel_expenses");
 let addTravelExpenses = document.getElementById("go_subtotal");
@@ -18,7 +19,8 @@ let addTotalAmount = document.getElementById("total_amount");
 addSubtotal.innerHTML = "";
 addTravelExpenses.innerHTML = "";
 addTotalAmount.innerHTML = "";
-// for CONTROL dishes AND shopping-basket ...
+
+// Elements used to switch between desktop and mobile basket layouts.
 let sectionDishes = document.getElementById("section_dishes");
 let sectionBasket = document.getElementById("section_basket");
 let travelMobile = document.getElementById("travel_expenses");
@@ -30,7 +32,7 @@ let basketH2 = document.getElementById("headline_h2");
 
 
 function checkMediaWidth() {
-    // checking for nessesary mobile_style.css
+    // Updates the layout state based on the current viewport width.
     if (window.innerWidth < 768) {
         mediaMobile = true;
         showBasket = false;
@@ -41,28 +43,22 @@ function checkMediaWidth() {
 }
 
 function initOnload() {
-    // first load html
-    // first check to get Mobile-Style ...
+    // Initializes responsive behavior, menu content, and basket totals.
     checkMediaWidth();
-    // eventListener now running all time and check is Mobile-Style nessesary
     window.addEventListener("resize", () => {
         checkMediaWidth();
-        // toggle the CLASS for shopping-basket ...
         makeChangeClassForInit();
     });
     nextDishes.innerHTML = renderImgDishes();
     makeChangeClassForInit();
     for (let index = 0; index < myDishes.length; index++) {
-        // render the card with all dishes
         nextDishes.innerHTML += renderDishes(index);
     }
-    // render all costs-items of shopping-basket
     renderAllCosts();
 }
 
 function makeChangeClassForInit() {
-    // depending on Boolean from "mediaMobile" use 
-    // the mobile-Class OR switch back
+    // Applies the desktop or mobile layout classes for the current viewport.
     if (mediaMobile) {
         setClassMobile();
     } else {
@@ -71,7 +67,7 @@ function makeChangeClassForInit() {
 }
 
 function setClassMobile() {
-    // toggle to Class for mobile ...
+    // Switches menu and basket elements to their mobile layout classes.
     sectionDishes.classList.replace("dishes", "dishes_mobile");
     sectionBasket.classList.replace("shopping_basket", "shopping_basket_mobile");
     travelMobile.classList.replace("price_box", "price_box_mobile");
@@ -82,7 +78,7 @@ function setClassMobile() {
 }
 
 function setClassPC() {
-    // toggle to Class for PC ...
+    // Restores the desktop layout classes for menu and basket elements.
     sectionDishes.classList.replace("dishes_mobile", "dishes");
     sectionBasket.classList.replace("shopping_basket_mobile", "shopping_basket");
     travelMobile.classList.replace("price_box_mobile", "price_box");
@@ -93,7 +89,7 @@ function setClassPC() {
 }
 
 function addDishes(index) {
-    // render a new dish in the shopping-basket
+    // Increases a dish quantity and rebuilds the basket contents.
     dishesAdd.innerHTML = "";
     myDishes[index].amount = myDishes[index].amount + 1;
     for (let index = 0; index < myDishes.length; index++) {
@@ -101,32 +97,28 @@ function addDishes(index) {
             dishesAdd.innerHTML += renderAddDishes(index);
         }
     };
-    // render all costs-items of shopping-basket
     renderAllCosts();
     if (mediaMobile) {
-        // if MOBILE then show Button CLOSE shopping-basket
+        // Adds the close control while the mobile basket is active.
         closeBasket.innerHTML += `<button class="button_close_basket" id="button_close_basket" 
             onclick="mobileCloseBasket()">Warenkorb schließen</button>`
     }
 }
 
 function renderAllCosts(index) {
-    // go to ALL render-functions for COSTS of shopping-basket
+    // Recalculates and renders all basket price components.
     if (errorMarker) {
-        // if shopping-basket is emty ... ERROR: frist choise a dish
         errorMarker = false;
         clearErrorMessage();
     }
-    // get SUBTOTAL
     getPriceSubTotal();
-    // render all costs of shopping-basket
     addSubtotal.innerHTML = renderSubtotal(index);
     addTravelExpenses.innerHTML = renderTravelExpenses();
     addTotalAmount.innerHTML = renderTotalAmount();
 }
 
 function getPriceSubTotal() {
-    // FOR-Loop to get SUBTOTAL
+    // Calculates the basket subtotal and total including delivery costs.
     subTotal = 0;
     totalAmount = 0;
     for (let index = 0; index < myDishes.length; index++) {
@@ -134,14 +126,13 @@ function getPriceSubTotal() {
             subTotal += myDishes[index].price * myDishes[index].amount;
         }
     }
-    // add travel expenses when something is in the basket
     if (subTotal > 0) {
         totalAmount = subTotal + 5.00;
     }
 }
 
 function reduceDishes(index) {
-    // render user have reduce a dish
+    // Decreases a dish quantity and rebuilds the basket contents.
     if (myDishes[index].amount > 0) {
         myDishes[index].amount = myDishes[index].amount - 1;
         dishesAdd.innerHTML = "";
@@ -155,7 +146,7 @@ function reduceDishes(index) {
 }
 
 function clearDishes(index) {
-    // clear the sopping-basket after order
+    // Removes a dish from the basket and refreshes the basket contents.
     myDishes[index].amount = 0;
     dishesAdd.innerHTML = "";
     for (let index = 0; index < myDishes.length; index++) {
@@ -167,8 +158,7 @@ function clearDishes(index) {
 }
 
 function showEuroValue(value_number) {
-    // function get value as a parameter "value_number"
-    // function give back a string in correct EURO-Format
+    // Formats a numeric value as a German euro currency string.
     return new Intl.NumberFormat('de-DE', {
         style: 'currency',
         currency: 'EUR',
@@ -178,15 +168,13 @@ function showEuroValue(value_number) {
 }
 
 function placeTheOrder() {
-    // do the order for the shopping-basket
+    // Displays either the test-order confirmation or the empty-basket error.
     if (totalAmount > 0) {
-        // order is OK
         makeOrder = true;
         let orderBox = document.getElementById("errorOrder");
         orderBox.innerHTML = "";
         orderBox.innerHTML = renderOrder();
     } else {
-        // ERROR - there is NO order !
         errorMarker = true;
         let errorMessage = document.getElementById("errorOrder");
         errorMessage.innerHTML = "";
@@ -197,15 +185,14 @@ function placeTheOrder() {
 }
 
 function clearErrorMessage() {
-    // CLEAR error-order-box AND clear message-box after ORDER
+    // Clears order feedback and resets the basket after a completed test order.
     let errorMessage = document.getElementById("errorOrder");
     errorMessage.innerHTML = "";
-    // CLEAR shopping-basket after ORDER
     if (makeOrder) {
         clearBasket();
         makeOrder = false;
         if (mediaMobile) {
-            // when MOBILE ... close shopping-basket and show the Button-OPEN-Basket
+            // Closes the mobile basket and restores its open button.
             controlButton.classList.remove("hiddenButtonBasket");
             controlButton.classList.add("showButtonBasket");
             basketH2.classList.remove("mobile_showBasket");
@@ -216,7 +203,7 @@ function clearErrorMessage() {
 }
 
 function clearBasket() {
-    // clear the shopping basket after the order is made
+    // Resets all dish quantities and refreshes basket pricing.
     for (let index = 0; index < myDishes.length; index++) {
         myDishes[index].amount = 0;
     }
@@ -225,9 +212,8 @@ function clearBasket() {
 }
 
 
-// SEND E-Mail
 function sendMail(event) {
-    // user wants contact with store per E-Mail    
+    // Submits the validated contact form to Formspree and opens the confirmation page.
     event.preventDefault();
     const data = new FormData(event.target);
 
@@ -238,7 +224,6 @@ function sendMail(event) {
             'Accept': 'application/json'
         }
     }).then(() => {
-        // window.location.replace("./mail_confirmation.html");
         window.location.href = "./html/mail_confirmation.html";
     }).catch((error) => {
         console.log(error);
@@ -247,7 +232,7 @@ function sendMail(event) {
 
 
 function mobileShowBasket() {
-    // onclick BUTTON SHOW shopping-basket ...
+    // Opens the mobile basket and hides the open-basket button.
     sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");
     basketH2.classList.remove("mobile_noBasket");
     basketH2.classList.add("mobile_showBasket");
@@ -258,7 +243,7 @@ function mobileShowBasket() {
 }
 
 function mobileCloseBasket() {
-    // onclick BUTTON CLOSE shopping-basket ...
+    // Closes the mobile basket and restores the open-basket button.
     controlButton.classList.remove("hiddenButtonBasket");
     controlButton.classList.add("showButtonBasket");
     basketH2.classList.remove("mobile_showBasket");

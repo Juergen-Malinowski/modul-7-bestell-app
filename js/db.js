@@ -1,4 +1,4 @@
-// DEFINITION OBJECT-Database
+// Dish data used to render the menu and manage basket quantities.
 
 let myDishes = [
     {

@@ -1,4 +1,4 @@
-/* BASIC CSS ... */
+/* Base typography */
 
 h1 {
     font-family: 'CS Freya Demo';
@@ -28,7 +28,7 @@ h3 {
 }
 
 
-/* CLASS for header */
+/* Header and navigation */
 .header_grafik {
     background-color: rgba(220, 118, 36, 0.988);
     display: flex;
@@ -102,7 +102,7 @@ h3 {
 }
 
 
-/* CLASS for footer */
+/* Footer */
 .footer_grafik {
     display: flex;
     gap: 100px;
@@ -136,7 +136,7 @@ h3 {
     color: yellow;
 }
 
-/* CLASS for impressum */
+/* Legal notice */
 .box_position_im {
     display: flex;
     justify-content: center;
@@ -171,7 +171,7 @@ h3 {
 }
 
 
-/* CLASS for contact-mail */
+/* Contact form */
 .contact_grafik_mail {
     display: flex;
     flex-direction: column;
@@ -237,15 +237,14 @@ h3 {
 }
 
 
-/* CLASS for all dishes */
+/* Dish list */
 .dishes {
     width: calc(100% - 308px);
     flex-grow: 1;
 }
 
 .dishes_mobile {
-    /* changes the basic HTML structure 
-    for MOBILE up to 767px FOR dishes */
+    /* Mobile dish layout up to 767px. */
     width: 100vh;
     overflow-x: hidden;
 }
@@ -268,7 +267,6 @@ h3 {
     border-style: double;
     border-color: black;
     border-width: 10px;
-    /* border-radius: 50% 50% 50% 50%; */
     border-radius: 20px 20px 20px 20px;
     object-fit: cover;
     position: relative;
@@ -343,7 +341,7 @@ h3 {
 }
 
 
-/* CLASS for shoppingbasket */
+/* Shopping basket */
 
 .shopping_basket {
     width: 300px;
@@ -354,8 +352,7 @@ h3 {
 }
 
 .shopping_basket_mobile {
-    /* changes the basic HTML structure 
-    for MOBILE up to 767px FOR shopping-basket */
+    /* Mobile basket layout up to 767px. */
     display: none;
     position: fixed;
     bottom: 0;

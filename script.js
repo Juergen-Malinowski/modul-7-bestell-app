@@ -9,8 +9,6 @@ let totalAmount = 0;
 let errorMarker = false;
 let makeOrder = false;
 let mediaMobile = false;
-let showBasket = true;
-let mediaWidth = window.innerWidth;
 
 // Basket pricing elements.
 let nextDishes = document.getElementById("show_dishes");
@@ -34,13 +32,7 @@ let basketH2 = document.getElementById("headline_h2");
 
 function checkMediaWidth() {
     // Updates the layout state based on the current viewport width.
-    if (window.innerWidth < 768) {
-        mediaMobile = true;
-        showBasket = false;
-    } else {
-        mediaMobile = false;
-        showBasket = true;
-    }
+    mediaMobile = window.innerWidth < 768;
 }
 
 function initOnload() {
@@ -101,14 +93,14 @@ function addDishes(index) {
     renderAllCosts();
 }
 
-function renderAllCosts(index) {
+function renderAllCosts() {
     // Recalculates and renders all basket price components.
     if (errorMarker) {
         errorMarker = false;
         clearErrorMessage();
     }
     getPriceSubTotal();
-    addSubtotal.innerHTML = renderSubtotal(index);
+    addSubtotal.innerHTML = renderSubtotal();
     addTravelExpenses.innerHTML = renderTravelExpenses(subTotal > 0 ? DELIVERY_COST : 0);
     addTotalAmount.innerHTML = renderTotalAmount();
 }

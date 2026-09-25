@@ -37,9 +37,8 @@
             </div>
         </div>
 
-        <!-- Submits the form through sendMail() after native HTML validation succeeds. -->
-        <form onsubmit="if(this.checkValidity()) 
-            { sendMail(event); } else { return false; }">
+        <!-- Handles a validated contact form locally without sending personal data. -->
+        <form onsubmit="handleContactSubmit(event)">
             <div class="contact_grafik_mail">
                 <p class="headline_grafik_mail">Kontaktiere uns ...</p>
                 <div class="input_position">
@@ -58,6 +57,7 @@
         </form>
     </section>
 
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

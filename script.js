@@ -212,25 +212,6 @@ function clearBasket() {
 }
 
 
-function sendMail(event) {
-    // Submits the validated contact form to Formspree and opens the confirmation page.
-    event.preventDefault();
-    const data = new FormData(event.target);
-
-    fetch("https://formspree.io/f/xnnzkyyk", {
-        method: "POST",
-        body: new FormData(event.target),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(() => {
-        window.location.href = "./html/mail_confirmation.html";
-    }).catch((error) => {
-        console.log(error);
-    });
-}
-
-
 function mobileShowBasket() {
     // Opens the mobile basket and hides the open-basket button.
     sectionBasket.classList.replace("shopping_basket_mobile", "show_shopping_basket_mobile");

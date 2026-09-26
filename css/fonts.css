@@ -1,7 +1,36 @@
-/* Local system font aliases used without external network requests. */
+/* Local typography and shared presentation rules without external font requests. */
 
-@font-face {
-    font-family: "CS Freya Demo";
-    src: local("Brush Script MT"), local("Segoe Script");
-    font-display: swap;
+h1 {
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-size: 4em;
+    font-style: normal;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.header_grafik > a {
+    display: block;
+    align-self: flex-start;
+    line-height: 0;
+    background-color: rgba(220, 118, 36, 0.988);
+}
+
+.privacy_link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    color: white;
+    background-color: #707070;
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+.privacy_link:hover {
+    color: yellow;
+    background-color: #5f5f5f;
+}
+
+.project_note {
+    max-width: 380px;
+    text-align: center;
 }

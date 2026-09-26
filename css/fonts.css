@@ -1,9 +1,18 @@
 /* Local typography and shared presentation rules without external font requests. */
 
+@font-face {
+    font-family: "Kaushan Script";
+    src: url("../assets/fonts/KaushanScript-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
 h1 {
-    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-family: "Kaushan Script", cursive;
     font-size: 4em;
     font-style: normal;
+    font-weight: 400;
     line-height: 1.1;
     white-space: nowrap;
 }

@@ -162,6 +162,9 @@ function placeTheOrder() {
         let orderBox = document.getElementById("errorOrder");
         orderBox.innerHTML = "";
         orderBox.innerHTML = renderOrder();
+        if (mediaMobile) {
+            closeBasketButton.hidden = true;
+        }
     } else {
         errorMarker = true;
         let errorMessage = document.getElementById("errorOrder");

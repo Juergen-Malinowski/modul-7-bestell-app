@@ -1,544 +1,898 @@
 /* Base typography */
 
 h1 {
-    text-align: center;
-    background-color: rgba(220, 118, 36, 0.988);
-    margin-left: 200px;
-    padding-top: 20px;
+  text-align: center;
+  background-color: rgba(220, 118, 36, 0.988);
+  margin-left: 200px;
+  padding-top: 20px;
 }
 
 h2 {
-    font-size: 30px;
-    text-align: center;
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 30px;
 }
 
 h3 {
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
 
 /* Header and navigation */
 .header_grafik {
-    background-color: rgba(220, 118, 36, 0.988);
-    display: flex;
+  background-color: rgba(220, 118, 36, 0.988);
+  display: flex;
 }
 
 .bestell_logo {
-    width: 200px;
-    height: auto;
-    background-color: rgba(220, 118, 36, 0.988);
-    padding-top: 20px;
-    padding-left: 10px;
+  width: 200px;
+  height: auto;
+  background-color: rgba(220, 118, 36, 0.988);
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 .evaluation_grafik {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-left: 10px;
-    background-color: rgba(220, 118, 36, 0.988);
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: rgba(220, 118, 36, 0.988);
 }
 
 .my_restaurant {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    gap: 3px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 3px;
 }
 
 .sort_header_nav {
-    background-color: rgba(220, 118, 36, 0.988);
-    display: flex;
-    justify-content: space-between;
+  background-color: rgba(220, 118, 36, 0.988);
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav_grafik {
-    margin-right: 10px;
-    background-color: rgba(220, 118, 36, 0.988);
-    display: flex;
+  margin-right: 10px;
+  background-color: rgba(220, 118, 36, 0.988);
+  display: flex;
 }
 
 .start_grafik {
-    font-size: 30px;
-    background-color: rgba(220, 118, 36, 0.988);
+  font-size: 30px;
+  background-color: rgba(220, 118, 36, 0.988);
 }
 
 .start_grafik:hover {
-    color: yellow;
-    text-decoration: underline;
+  color: yellow;
+  text-decoration: underline;
 }
 
 .contact_grafik {
-    font-size: 30px;
-    margin-left: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
+  font-size: 30px;
+  margin-left: 20px;
+  background-color: rgba(220, 118, 36, 0.988);
 }
 
 .contact_grafik:hover {
-    color: yellow;
-    text-decoration: underline;
+  color: yellow;
+  text-decoration: underline;
 }
 
 .impressum_grafik {
-    font-size: 30px;
-    margin-left: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
+  font-size: 30px;
+  margin-left: 20px;
+  background-color: rgba(220, 118, 36, 0.988);
 }
 
 .impressum_grafik:hover {
-    color: yellow;
-    text-decoration: underline;
+  color: yellow;
+  text-decoration: underline;
 }
-
 
 /* Footer */
 .footer_grafik {
-    display: flex;
-    gap: 100px;
+  display: flex;
+  gap: 100px;
+  padding-bottom: 10px;
 }
 
 .icon_thanks {
-    color: white;
-    margin-left: 5px;
+  color: white;
+  margin-left: 5px;
 }
 
 .icon_thanks:hover {
-    color: yellow;
+  color: yellow;
 }
 
 .privacy_policy {
-    color: white;
+  color: white;
 }
 
-
 .privacy_policy:hover {
-    color: yellow;
+  color: yellow;
 }
 
 .copyright_jm {
-    font-size: 24px;
-    color: yellow;
+  font-size: 24px;
+  color: yellow;
 }
 
 .copyright_jm_impressum {
-    font-size: 24px;
-    color: yellow;
+  font-size: 24px;
+  color: yellow;
 }
 
 /* Legal notice */
 .box_position_im {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .box_grafik {
-    width: 450px;
-    height: 550px;
-    border-radius: 20px 20px 20px 20px;
-    border-style: groove;
-    border-color: black;
-    border-width: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 450px;
+  height: 550px;
+  border-radius: 20px 20px 20px 20px;
+  border-style: groove;
+  border-color: black;
+  border-width: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline_grafik {
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .icon_thanks_im {
-    text-align: center;
+  text-align: center;
 }
 
 .icon_thanks_im:hover {
-    color: yellow;
+  color: yellow;
 }
-
 
 /* Contact form */
 .contact_grafik_mail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input_position {
-    width: 800px;
-    height: 300px;
-    border-style: groove;
-    border-color: black;
-    border-width: 5px;
-    background-color: rgba(220, 118, 36, 0.988);
-    border-radius: 20px 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 800px;
+  height: 300px;
+  border-style: groove;
+  border-color: black;
+  border-width: 5px;
+  background-color: rgba(220, 118, 36, 0.988);
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline_grafik_mail {
-    width: 500px;
-    font-size: 40px;
-    border-style: groove;
-    border-color: black;
-    border-width: 5px;
-    color: white;
-    background-color: rgba(220, 118, 36, 0.988);
-    border-radius: 20px 20px 20px 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  width: 500px;
+  font-size: 40px;
+  border-style: groove;
+  border-color: black;
+  border-width: 5px;
+  color: white;
+  background-color: rgba(220, 118, 36, 0.988);
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .label_grafik {
-    font-size: 26px;
-    color: black;
-    background-color: rgba(220, 118, 36, 0.988);
-    margin-top: 10px;
+  font-size: 26px;
+  color: black;
+  background-color: rgba(220, 118, 36, 0.988);
+  margin-top: 10px;
 }
 
 .input_grafik {
-    width: 500px;
-    font-size: 20px;
-    color: black;
-    background-color: white;
+  width: 500px;
+  font-size: 20px;
+  color: black;
+  background-color: white;
 }
 
 .send_button {
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .send_button:hover {
-    font-size: 24px;
-    color: white;
-    background-color: black;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  color: white;
+  background-color: black;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
-
 
 /* Dish list */
 .dishes {
-    width: calc(100% - 308px);
-    flex-grow: 1;
+  width: calc(100% - 308px);
+  flex-grow: 1;
 }
 
 .dishes_mobile {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .icon_position {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon_wok_grafik {
-    background-color: rgba(220, 118, 36, 0.01);
-    padding-right: 150px;
+  background-color: rgba(220, 118, 36, 0.01);
+  padding-right: 150px;
 }
 
 .img_grafik {
-    width: 99%;
-    height: 200px;
-    margin: 10px 0 90px 10px;
-    border-style: double;
-    border-color: black;
-    border-width: 10px;
-    border-radius: 20px 20px 20px 20px;
-    object-fit: cover;
-    position: relative;
+  width: 99%;
+  height: 200px;
+  margin: 10px 0 90px 10px;
+  border-style: double;
+  border-color: black;
+  border-width: 10px;
+  border-radius: 20px 20px 20px 20px;
+  object-fit: cover;
+  position: relative;
 }
 
 .icon_wok {
-    width: 150px;
-    height: 150px;
-    border-style: double;
-    border-color: black;
-    border-width: 10px;
-    background-color: white;
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    top: 275px;
+  width: 150px;
+  height: 150px;
+  border-style: double;
+  border-color: black;
+  border-width: 10px;
+  background-color: white;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  top: 275px;
 }
 
 .single_dishes {
-    width: 99%;
-    height: 200px;
-    background-color: white;
-    margin: 0 5px 20px 20px;
-    border-radius: 20px 20px 20px 20px;
-    padding-top: 5px;
-    padding-left: 5px;
+  width: 99%;
+  height: 200px;
+  background-color: white;
+  margin: 0 5px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .dishes_and_button {
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .single_dishes_meal {
-    font-size: 28px;
-    font-style: italic;
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    margin-bottom: 30px;
-    margin-left: 5px;
+  font-size: 28px;
+  font-style: italic;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 30px;
+  margin-left: 5px;
 }
 
 .single_dishes_discription {
-    font-size: 18px;
-    background-color: white;
-    margin-bottom: 30px;
-    margin-left: 5px;
-    margin-right: 50px;
+  font-size: 18px;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 50px;
 }
 
 .single_dishes_price {
-    font-size: 28px;
-    font-weight: bold;
-    color: orange;
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    padding-left: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  color: orange;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  padding-left: 5px;
 }
 
 .plus_grafik {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  margin-right: 20px;
 }
 
 .plus_grafik:hover {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
-
 
 /* Shopping basket */
 
 .shopping_basket {
-    width: 300px;
-    flex-grow: 1;
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    margin: 10px 3px 0 20px;
+  width: 300px;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  margin: 10px 3px 0 20px;
 }
 
 .shopping_basket_mobile {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    overflow-x: hidden;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .show_shopping_basket_mobile {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    overflow-x: hidden;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .basket_grafik {
-    position: sticky;
-    top: 0;
-    border-radius: 20px 20px 20px 20px;
-    background-color: white;
+  position: sticky;
+  top: 0;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
 }
 
 .mobile_showBasket {
-    display: block;
+  display: block;
 }
 
 .mobile_noBasket {
-    display: none;
+  display: none;
 }
 
-
 .selection_grafik {
-    background-color: white;
+  background-color: white;
 }
 
 .line_grafik {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .basket_meal {
-    font-size: 14px;
-    background-color: white;
-    margin-left: 5px;
-    margin-top: 8px;
-    margin-bottom: 5px;
+  font-size: 14px;
+  background-color: white;
+  margin-left: 5px;
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
 .price_box {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
 }
 
 .basket_subtotal {
-    color: grey;
-    background-color: white;
-    margin-left: 5px;
+  color: grey;
+  background-color: white;
+  margin-left: 5px;
 }
 
 .basket_total {
-    font-weight: bold;
-    background-color: white;
-    margin-left: 5px;
+  font-weight: bold;
+  background-color: white;
+  margin-left: 5px;
 }
 
 .icons_position {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .icons_disply_row {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .icons_disply_row_rubbish {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 70px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
 }
 
 .icon_grafik {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  margin-left: 5px;
 }
 
 .icon_grafik_minus {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  margin-left: 5px;
 }
 
 .icon_grafik:hover {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .icon_grafik_rubbish {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  margin-left: 5px;
 }
 
 .icon_grafik_rubbish:hover {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .button_position {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .button_grafik {
-    font-size: 24px;
-    color: white;
-    border-radius: 10px 10px 10px 10px;
+  font-size: 24px;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
 }
 
-
 .button_grafik:hover {
-    font-size: 28px;
-    color: yellow;
+  font-size: 28px;
+  color: yellow;
 }
 
 .box_for_order {
-    width: 100%;
-    height: 140px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  width: 100%;
+  height: 140px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .order_box {
-    font-size: 20px;
-    background-color: rgba(220, 118, 36, 0.988);
-    margin: 10px;
-    border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+  background-color: rgba(220, 118, 36, 0.988);
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .order_box:hover {
-    background-color: rgba(220, 118, 36, 0.7);
+  background-color: rgba(220, 118, 36, 0.7);
 }
 
 .box_for_ErrorOrder {
-    width: 100%;
-    height: 140px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  width: 100%;
+  height: 140px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .order_box_error {
-    font-size: 20px;
-    background-color: yellow;
-    margin: 10px;
-    border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+  background-color: yellow;
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .button_open_basket {
-    display: none;
-    width: 310px;
-    height: 100px;
-    font-size: 25px;
-    background-color: yellow;
-    font-weight: bold;
-    border-style: double;
-    border-color: black;
-    border-width: 5px;
-    position: fixed;
-    bottom: 0;
+  display: none;
+  width: 310px;
+  height: 100px;
+  font-size: 25px;
+  background-color: yellow;
+  font-weight: bold;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  position: fixed;
+  bottom: 0;
 }
 
 .showButtonBasket {
-    display: block;
+  display: block;
 }
 
 .hiddenButtonBasket {
-    display: none;
+  display: none;
+}
+
+/* Large desktop scaling from 1440px */
+@media (min-width: 1440px) {
+  /* Header and navigation */
+  .bestell_logo {
+    width: clamp(230px, 14vw, 270px);
+  }
+
+  .evaluation_grafik {
+    font-size: clamp(26px, 1.6vw, 30px);
+  }
+
+  .start_grafik,
+  .contact_grafik,
+  .impressum_grafik {
+    font-size: clamp(38px, 2.5vw, 44px);
+  }
+
+  .icon_wok {
+    top: clamp(275px, calc(10vw + 131px), 323px);
+  }
+
+  /* Dish list */
+  .single_dishes {
+    height: clamp(240px, 15vw, 285px);
+  }
+
+  .single_dishes_meal {
+    font-size: clamp(36px, 2.2vw, 42px);
+  }
+
+  .single_dishes_discription {
+    font-size: clamp(24px, 1.4vw, 27px);
+  }
+
+  .single_dishes_price {
+    font-size: clamp(34px, 2vw, 40px);
+  }
+
+  .plus_grafik {
+    width: clamp(60px, 3.7vw, 70px);
+    height: clamp(60px, 3.7vw, 70px);
+  }
+
+  .plus_grafik:hover {
+    width: clamp(70px, 4.2vw, 80px);
+    height: clamp(70px, 4.2vw, 80px);
+  }
+
+  /* Shopping basket */
+  .shopping_basket {
+    width: clamp(390px, 24vw, 460px);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  #headline_h2 {
+    font-size: clamp(36px, 2.3vw, 42px);
+  }
+
+  .basket_meal {
+    font-size: clamp(19px, 1.2vw, 23px);
+  }
+
+  .basket_subtotal,
+  .basket_total {
+    font-size: clamp(20px, 1.25vw, 24px);
+  }
+
+  .box_for_order {
+    height: auto;
+    min-height: clamp(150px, 9vw, 170px);
+    align-items: center;
+  }
+
+  .order_box {
+    font-size: clamp(20px, 1.25vw, 24px);
+    padding: clamp(10px, 0.7vw, 14px) clamp(14px, 1vw, 20px);
+  }
+
+  .icon_grafik,
+  .icon_grafik_minus,
+  .icon_grafik_rubbish {
+    width: clamp(26px, 1.6vw, 30px);
+    height: clamp(26px, 1.6vw, 30px);
+  }
+
+  .icon_grafik {
+    font-size: clamp(18px, 1.1vw, 21px);
+  }
+
+  .icon_grafik:hover,
+  .icon_grafik_rubbish:hover {
+    width: clamp(30px, 1.9vw, 36px);
+    height: clamp(30px, 1.9vw, 36px);
+  }
+
+  .button_grafik {
+    font-size: clamp(25px, 1.6vw, 29px);
+  }
+
+  .button_grafik:hover {
+    font-size: clamp(28px, 1.8vw, 32px);
+  }
+
+  /* Legal notice */
+  .box_grafik {
+    width: clamp(900px, 65vw, 1100px);
+  }
+
+  .box_grafik .headline_grafik {
+    font-size: clamp(24px, 1.6vw, 30px);
+  }
+
+  .box_grafik h3 {
+    font-size: clamp(34px, 2.2vw, 40px);
+  }
+
+  .project_note {
+    max-width: 700px;
+  }
+
+  .copyright_jm_impressum {
+    font-size: clamp(26px, 1.6vw, 30px);
+  }
+
+  /* Privacy policy */
+  main.legal_content {
+    max-width: clamp(900px, 65vw, 1100px);
+  }
+
+  .legal_content h2 {
+    font-size: clamp(36px, 2.4vw, 44px);
+  }
+
+  .legal_content h3 {
+    font-size: clamp(34px, 2.2vw, 40px);
+  }
+
+  .legal_content p,
+  .legal_content a {
+    font-size: clamp(24px, 1.6vw, 30px);
+  }
+
+  /* Contact form */
+  .input_position {
+    width: clamp(1040px, 68vw, 1200px);
+    height: 390px;
+  }
+
+  .headline_grafik_mail {
+    width: clamp(650px, 42vw, 760px);
+    font-size: clamp(50px, 3.2vw, 58px);
+  }
+
+  .label_grafik {
+    font-size: clamp(34px, 2.1vw, 38px);
+  }
+
+  .input_grafik {
+    width: clamp(650px, 42vw, 760px);
+    font-size: clamp(25px, 1.6vw, 29px);
+  }
+
+  .send_button {
+    font-size: clamp(25px, 1.6vw, 29px);
+  }
+
+  .send_button:hover {
+    font-size: clamp(29px, 1.9vw, 34px);
+  }
+}
+
+/* Widescreen scaling from 1920px */
+@media (min-width: 1920px) {
+  /* Header and navigation */
+  .bestell_logo {
+    width: clamp(268.8px, calc(53.356px + 11.221vw), 439.36px);
+  }
+
+  .evaluation_grafik {
+    font-size: clamp(30px, calc(10.295px + 1.026vw), 45.6px);
+  }
+
+  .start_grafik,
+  .contact_grafik,
+  .impressum_grafik {
+    font-size: clamp(44px, calc(17.726px + 1.368vw), 64.8px);
+  }
+
+  .icon_position {
+    position: relative;
+  }
+
+  .img_grafik {
+    margin-bottom: clamp(90px, calc(24.211px + 3.421vw), 140px);
+  }
+
+  .img_grafik {
+    height: clamp(200px, calc(-52.632px + 13.158vw), 400px);
+  }
+
+  .icon_wok {
+    width: clamp(150px, calc(31.579px + 6.167vw), 240px);
+    height: clamp(150px, calc(31.579px + 6.167vw), 240px);
+    border-width: clamp(10px, calc(1.579px + 0.438vw), 16px);
+    top: clamp(135px, calc(-60.789px + 10.197vw), 290px);
+  }
+
+  /* Dish list */
+  .single_dishes {
+    height: clamp(285px, calc(129px + 8.125vw), 408.5px);
+  }
+
+  .single_dishes_meal {
+    font-size: clamp(42px, calc(19.011px + 1.197vw), 60.2px);
+  }
+
+  .single_dishes_discription {
+    font-size: clamp(26.88px, calc(11.904px + 0.78vw), 38.736px);
+  }
+
+  .single_dishes_price {
+    font-size: clamp(38.4px, calc(16.067px + 1.163vw), 56.08px);
+  }
+
+  .plus_grafik {
+    width: clamp(70px, calc(37.158px + 1.711vw), 96px);
+    height: clamp(70px, calc(37.158px + 1.711vw), 96px);
+  }
+
+  .plus_grafik:hover {
+    width: clamp(80px, calc(47.158px + 1.711vw), 106px);
+    height: clamp(80px, calc(47.158px + 1.711vw), 106px);
+  }
+
+  /* Shopping basket */
+  .shopping_basket {
+    width: clamp(460px, calc(197.263px + 13.684vw), 668px);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  #headline_h2 {
+    font-size: clamp(42px, calc(19.011px + 1.197vw), 60.2px);
+  }
+
+  .basket_meal {
+    font-size: clamp(23px, calc(8.221px + 0.77vw), 34.7px);
+  }
+
+  .basket_subtotal,
+  .basket_total {
+    font-size: clamp(24px, calc(10.863px + 0.684vw), 34.4px);
+  }
+
+  .box_for_order {
+    height: auto;
+    min-height: clamp(170px, calc(68.947px + 5.263vw), 250px);
+    align-items: center;
+  }
+
+  .order_box {
+    font-size: clamp(24px, calc(10.863px + 0.684vw), 34.4px);
+    padding: clamp(14px, calc(3.895px + 0.526vw), 22px)
+      clamp(20px, calc(4.842px + 0.789vw), 32px);
+  }
+
+  .icon_grafik,
+  .icon_grafik_minus,
+  .icon_grafik_rubbish {
+    width: clamp(30px, calc(13.579px + 0.855vw), 43px);
+    height: clamp(30px, calc(13.579px + 0.855vw), 43px);
+  }
+
+  .icon_grafik {
+    font-size: clamp(21px, calc(9.505px + 0.599vw), 30.1px);
+  }
+
+  .icon_grafik:hover,
+  .icon_grafik_rubbish:hover {
+    width: clamp(36px, calc(19.579px + 0.855vw), 49px);
+    height: clamp(36px, calc(19.579px + 0.855vw), 49px);
+  }
+
+  .button_grafik {
+    font-size: clamp(29px, calc(10.937px + 0.941vw), 43.3px);
+  }
+
+  .button_grafik:hover {
+    font-size: clamp(32px, calc(12.295px + 1.026vw), 47.6px);
+  }
+
+  /* Legal notice */
+  .box_grafik {
+    width: clamp(1100px, calc(291.579px + 42.105vw), 1740px);
+  }
+
+  .box_grafik .headline_grafik {
+    font-size: clamp(30px, calc(9.789px + 1.053vw), 46px);
+  }
+
+  .box_grafik h3 {
+    font-size: clamp(40px, calc(11.705px + 1.474vw), 62.4px);
+  }
+
+  .project_note {
+    max-width: clamp(700px, calc(194.737px + 26.316vw), 1100px);
+  }
+
+  .copyright_jm_impressum {
+    font-size: clamp(30px, calc(9.789px + 1.053vw), 46px);
+  }
+
+  /* Privacy policy */
+  main.legal_content {
+    max-width: clamp(1100px, calc(291.579px + 42.105vw), 1740px);
+  }
+
+  .legal_content h2 {
+    font-size: clamp(44px, calc(11.158px + 1.711vw), 70px);
+  }
+
+  .legal_content h3 {
+    font-size: clamp(40px, calc(11.705px + 1.474vw), 62.4px);
+  }
+
+  .legal_content p,
+  .legal_content a {
+    font-size: clamp(30px, calc(9.789px + 1.053vw), 46px);
+  }
+
+  /* Contact form */
+  .input_position {
+    width: clamp(1200px, calc(290.526px + 47.368vw), 1920px);
+    height: clamp(390px, calc(127.263px + 13.684vw), 598px);
+  }
+
+  .headline_grafik_mail {
+    width: clamp(760px, calc(173.895px + 30.526vw), 1224px);
+    font-size: clamp(58px, calc(17.579px + 2.105vw), 90px);
+  }
+
+  .label_grafik {
+    font-size: clamp(38px, calc(9.705px + 1.474vw), 60.4px);
+  }
+
+  .input_grafik {
+    width: clamp(760px, calc(173.895px + 30.526vw), 1224px);
+    font-size: clamp(29px, calc(6.768px + 1.158vw), 46.6px);
+  }
+
+  .send_button {
+    font-size: clamp(29px, calc(6.768px + 1.158vw), 46.6px);
+  }
+
+  .send_button:hover {
+    font-size: clamp(34px, calc(9.747px + 1.263vw), 53.2px);
+  }
 }

@@ -40,6 +40,7 @@
   }
 
   .img_grafik {
+    width: calc(100% - 10px);
     height: 100px;
     margin: 5px 5px 45px 5px;
   }
@@ -427,7 +428,8 @@
 
   /* Contact form */
   .input_position {
-    width: 310px;
+    width: calc(100% - 20px);
+    max-width: 310px;
     height: 350px;
   }
 
@@ -441,7 +443,8 @@
   }
 
   .input_grafik {
-    width: 290px;
+    width: calc(100% - 10px);
+    max-width: 290px;
     font-size: 16px;
   }
 }

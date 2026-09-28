@@ -30,6 +30,35 @@ let closeBasketButton = document.getElementById("button_close_basket");
 let basketH2 = document.getElementById("headline_h2");
 let orderButton = document.getElementById("order_button");
 
+function saveBasket() {
+  const basketAmounts = myDishes.map((dish) => dish.amount);
+  sessionStorage.setItem("basketAmounts", JSON.stringify(basketAmounts));
+}
+
+function renderBasket() {
+  dishesAdd.innerHTML = "";
+
+  for (let index = 0; index < myDishes.length; index++) {
+    if (myDishes[index].amount > 0) {
+      dishesAdd.innerHTML += renderAddDishes(index);
+    }
+  }
+}
+
+function loadBasket() {
+  const storedBasket = sessionStorage.getItem("basketAmounts");
+
+  if (!storedBasket) {
+    return;
+  }
+
+  const basketAmounts = JSON.parse(storedBasket);
+
+  for (let index = 0; index < myDishes.length; index++) {
+    myDishes[index].amount = basketAmounts[index] ?? 0;
+  }
+}
+
 function checkMediaWidth() {
   // Updates the layout state based on the current viewport width.
   mediaMobile = window.innerWidth < 768;
@@ -38,6 +67,7 @@ function checkMediaWidth() {
 function initOnload() {
   // Initializes responsive behavior, menu content, and basket totals.
   checkMediaWidth();
+  loadBasket();
   window.addEventListener("resize", () => {
     const wasMobile = mediaMobile;
     checkMediaWidth();
@@ -53,6 +83,7 @@ function initOnload() {
     nextDishes.innerHTML += renderDishes(index);
   }
   renderAllCosts();
+  renderBasket();
 }
 
 function makeChangeClassForInit() {
@@ -117,6 +148,7 @@ function addDishes(index) {
     }
   }
   renderAllCosts();
+  saveBasket();
 }
 
 function renderAllCosts() {
@@ -159,6 +191,7 @@ function reduceDishes(index) {
     }
   }
   renderAllCosts();
+  saveBasket();
 }
 
 function clearDishes(index) {
@@ -171,6 +204,7 @@ function clearDishes(index) {
     }
   }
   renderAllCosts();
+  saveBasket();
 }
 
 function showEuroValue(value_number) {
@@ -222,6 +256,7 @@ function clearBasket() {
     myDishes[index].amount = 0;
   }
   dishesAdd.innerHTML = "";
+  saveBasket();
   renderAllCosts();
 }
 

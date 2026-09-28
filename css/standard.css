@@ -1,13 +1,16 @@
 /* Global base styles for the application. */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    scroll-behavior: smooth;
-    background-color: rgba(195, 118, 36, 0.988);
-    color: black;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgba(195, 118, 36, 0.988);
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

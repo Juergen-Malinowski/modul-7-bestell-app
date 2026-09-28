@@ -313,7 +313,7 @@
   }
 
   .nav_grafik {
-    align-items: center;
+    align-items: flex-end;
   }
 
   .start_grafik {

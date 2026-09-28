@@ -94,6 +94,7 @@ h3 {
 .footer_grafik {
   display: flex;
   gap: 100px;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
@@ -122,6 +123,7 @@ h3 {
 .copyright_jm_impressum {
   font-size: 24px;
   color: yellow;
+  margin-top: 15px;
 }
 
 /* Legal notice */

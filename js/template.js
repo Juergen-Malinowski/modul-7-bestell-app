@@ -37,7 +37,7 @@ function renderAddDishes(index) {
             <div class="icons_disply_row">  
                 <img class="icon_grafik" src="./assets/Logo/plus_button.png" 
                     onclick="addDishes(${index})" alt="plus-button">
-                <p class="icon_grafik" id="change_amount">${myDishes[index].amount}x</p>
+                <p class="icon_grafik">${myDishes[index].amount}x</p>
                 <img class="icon_grafik_minus" src="./assets/Logo/minus_button.png" 
                     onclick="reduceDishes(${index})" alt="minus-button"> 
             </div>             
@@ -59,11 +59,11 @@ function renderSubtotal() {
     `
 }
 
-function renderTravelExpenses() {
-    // Renders the fixed delivery cost.
+function renderTravelExpenses(deliveryCost) {
+    // Renders the current delivery cost.
     return `
         <span class="basket_subtotal">Fahrtkosten: </span>
-        <span class="basket_subtotal">5,00 €</span>
+        <span class="basket_subtotal">${showEuroValue(deliveryCost)}</span>
     `
 }
 

@@ -1,11 +1,57 @@
-/* External font definition for CS Freya Demo. */
+/* Local typography and shared presentation rules without external font requests. */
 
 @font-face {
-    font-family: "CS Freya Demo";
-    src: url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.eot");
-    src: url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/b0e7049c1d35e2b5a48647df76aafe92.svg#CS Freya Demo")format("svg");
+  font-family: "Kaushan Script";
+  src: url("../assets/fonts/KaushanScript-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: clamp(4em, calc(10vw - 5em), 7em);
+  }
+}
+
+@media (min-width: 1920px) {
+  h1 {
+    font-size: clamp(7em, calc(0.514em + 5.405vw), 12em);
+  }
+}
+
+.header_grafik > a {
+  display: block;
+  align-self: flex-start;
+  line-height: 0;
+  background-color: rgba(220, 118, 36, 0.988);
+}
+
+.privacy_link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  color: white;
+  background-color: #707070;
+  border: 1px solid #555555;
+  border-radius: 8px;
+}
+
+.privacy_link:hover {
+  color: yellow;
+  background-color: #5f5f5f;
+}
+
+.project_note {
+  max-width: 380px;
+  text-align: center;
 }

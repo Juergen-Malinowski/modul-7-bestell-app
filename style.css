@@ -1,10 +1,6 @@
 /* Base typography */
 
 h1 {
-    font-family: 'CS Freya Demo';
-    font-size: 5em;
-    font-weight: bold;
-    font-style: italic;
     text-align: center;
     background-color: rgba(220, 118, 36, 0.988);
     margin-left: 200px;
@@ -244,8 +240,7 @@ h3 {
 }
 
 .dishes_mobile {
-    /* Mobile dish layout up to 767px. */
-    width: 100vh;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -352,11 +347,10 @@ h3 {
 }
 
 .shopping_basket_mobile {
-    /* Mobile basket layout up to 767px. */
     display: none;
     position: fixed;
     bottom: 0;
-    width: 100vh;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -364,7 +358,7 @@ h3 {
     display: block;
     position: fixed;
     bottom: 0;
-    width: 100vh;
+    width: 100%;
     overflow-x: hidden;
 }
 

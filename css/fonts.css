@@ -1,4 +1,4 @@
-/* Local typography and shared presentation rules without external font requests. */
+/* Local typography without external font requests. */
 
 @font-face {
   font-family: "Kaushan Script";
@@ -15,67 +15,4 @@ h1 {
   font-weight: 400;
   line-height: 1.1;
   white-space: nowrap;
-}
-
-.header_grafik > a {
-  display: block;
-  align-self: flex-start;
-  line-height: 0;
-  background-color: rgba(220, 118, 36, 0.988);
-}
-
-.privacy_link {
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 6px 12px;
-  color: white;
-  background-color: #707070;
-  border: 1px solid #555555;
-  border-radius: 8px;
-}
-
-.privacy_link:hover {
-  color: yellow;
-  background-color: #5f5f5f;
-}
-
-.project_note {
-  max-width: 380px;
-  text-align: center;
-}
-
-/* Large desktop scaling */
-@media (min-width: 1440px) {
-  h1 {
-    font-size: clamp(4em, calc(10vw - 5em), 7em);
-  }
-
-  .box_grafik .privacy_link {
-    font-size: clamp(24px, 1.6vw, 30px);
-    padding: clamp(10px, 0.8vw, 14px) clamp(22px, 1.5vw, 30px);
-  }
-
-  form + .headline_grafik .privacy_link {
-    font-size: clamp(34px, 2.1vw, 38px);
-    padding: clamp(12px, 0.9vw, 16px) clamp(26px, 1.7vw, 34px);
-  }
-}
-
-@media (min-width: 1920px) {
-  h1 {
-    font-size: clamp(7em, calc(-1.211em + 6.842vw), 13.5em);
-  }
-
-  .box_grafik .privacy_link {
-    font-size: clamp(30px, calc(9.789px + 1.053vw), 46px);
-    padding: clamp(14px, calc(5.916px + 0.421vw), 20.4px)
-      clamp(30px, calc(5.747px + 1.263vw), 49.2px);
-  }
-
-  form + .headline_grafik .privacy_link {
-    font-size: clamp(38px, calc(9.705px + 1.474vw), 60.4px);
-    padding: clamp(16px, calc(3.874px + 0.632vw), 25.6px)
-      clamp(34px, calc(5.705px + 1.474vw), 56.4px);
-  }
 }

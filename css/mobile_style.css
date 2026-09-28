@@ -312,6 +312,10 @@
     width: 80px;
   }
 
+  .nav_grafik {
+    align-items: center;
+  }
+
   .start_grafik {
     font-size: 14px;
   }

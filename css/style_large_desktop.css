@@ -108,6 +108,22 @@
     font-size: clamp(28px, 1.8vw, 32px);
   }
 
+  /* Footer */
+  .footer_grafik {
+    gap: clamp(100px, 7vw, 130px);
+    padding-top: clamp(15px, 1.1vw, 20px);
+    padding-bottom: clamp(10px, 0.8vw, 15px);
+  }
+
+  .icon_thanks,
+  .privacy_policy {
+    font-size: clamp(20px, 1.35vw, 26px);
+  }
+
+  .copyright_jm {
+    font-size: clamp(26px, 1.7vw, 32px);
+  }
+
   /* Legal notice */
   .box_grafik {
     width: clamp(900px, 65vw, 1100px);
@@ -132,6 +148,7 @@
 
   .copyright_jm_impressum {
     font-size: clamp(26px, 1.6vw, 30px);
+    margin-top: clamp(18px, 1.25vw, 24px);
   }
 
   /* Privacy policy */
@@ -309,6 +326,22 @@
     font-size: clamp(32px, calc(12.295px + 1.026vw), 47.6px);
   }
 
+  /* Footer */
+  .footer_grafik {
+    gap: clamp(130px, calc(41.579px + 4.605vw), 200px);
+    padding-top: clamp(20px, calc(7.368px + 0.658vw), 30px);
+    padding-bottom: clamp(15px, calc(6.158px + 0.461vw), 22px);
+  }
+
+  .icon_thanks,
+  .privacy_policy {
+    font-size: clamp(26px, calc(8.316px + 0.921vw), 40px);
+  }
+
+  .copyright_jm {
+    font-size: clamp(32px, calc(9.263px + 1.184vw), 50px);
+  }
+
   /* Legal notice */
   .box_grafik {
     width: clamp(1100px, calc(291.579px + 42.105vw), 1740px);
@@ -334,6 +367,7 @@
 
   .copyright_jm_impressum {
     font-size: clamp(30px, calc(9.789px + 1.053vw), 46px);
+    margin-top: clamp(24px, calc(6.316px + 0.921vw), 38px);
   }
 
   /* Privacy policy */

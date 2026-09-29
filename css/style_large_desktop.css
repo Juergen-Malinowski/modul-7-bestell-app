@@ -6,7 +6,7 @@
     font-size: clamp(4em, calc(10vw - 5em), 7em);
   }
 
-  /* Header and navigation */
+  /* Header, navigation, and hero */
   .bestell_logo {
     width: clamp(230px, 14vw, 270px);
   }
@@ -211,7 +211,7 @@
     font-size: clamp(7em, calc(-1.211em + 6.842vw), 13.5em);
   }
 
-  /* Header and navigation */
+  /* Header, navigation, and hero */
   .bestell_logo {
     width: clamp(268.8px, calc(53.356px + 11.221vw), 439.36px);
   }

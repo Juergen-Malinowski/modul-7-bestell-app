@@ -1,4 +1,4 @@
-// Main application logic for menu rendering, basket management, responsive behavior, and contact form submission.
+// Main application logic for menu rendering, basket management, responsive behavior, and session persistence.
 
 // Application state and DOM references.
 let dishesAdd = document.getElementById("select_dishes");
@@ -10,7 +10,7 @@ let errorMarker = false;
 let makeOrder = false;
 let mediaMobile = false;
 
-// Basket pricing elements.
+// Menu and basket output elements.
 let nextDishes = document.getElementById("show_dishes");
 let addSubtotal = document.getElementById("travel_expenses");
 let addTravelExpenses = document.getElementById("go_subtotal");
@@ -65,7 +65,7 @@ function checkMediaWidth() {
 }
 
 function initOnload() {
-  // Initializes responsive behavior, menu content, and basket totals.
+  // Initializes responsive behavior, restores the basket, renders menu content, and updates basket totals.
   checkMediaWidth();
   loadBasket();
   window.addEventListener("resize", () => {

@@ -247,7 +247,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* Dish list */
+/* Hero and dish list */
 .dishes {
   width: calc(100% - 308px);
   flex-grow: 1;

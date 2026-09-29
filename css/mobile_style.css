@@ -1,6 +1,6 @@
 /* Mobile layout up to 767px. */
 @media (max-width: 767px) {
-  /* Header and navigation */
+  /* Header, navigation, and hero */
   h1 {
     font-size: 2em;
     margin-left: 50px;
@@ -297,7 +297,7 @@
     color: yellow;
   }
 
-  /* Header and navigation */
+  /* Header, navigation, and hero */
   h1 {
     font-size: 22px;
     margin-left: 20px;
